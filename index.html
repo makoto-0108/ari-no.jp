@@ -114,22 +114,45 @@
 
 
 
-    <h2>ギャラリー（準備中）</h2>
-            .placeholder {
-  width: 300px;
-  height: 200px;
-  background-color: #ddd;
-  display: inline-block;
-  text-align: center;
-  line-height: 200px;
-  color: #666;
-  font-size: 14px;
-}
-      <img src="staff.jpg" alt="スタッフ" />
-       <img src="sagyou.jpg" alt="作業風景" />
-    <img src="#" alt="イベントの様子" class="placeholder" />
+  <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>アリーノ - ギャラリー</title>
+  <style>
+    /* 画像すべてに共通のサイズ */
+    img {
+      width: 300px;
+      height: auto;
+    }
 
-    <h2>アクセス</h2>
+    /* 準備中の画像風ボックス */
+    .placeholder {
+      width: 300px;
+      height: 200px;
+      background-color: #ddd;
+      display: inline-block;
+      text-align: center;
+      line-height: 200px;
+      color: #666;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>ギャラリー（準備中）</h2>
+
+  <img src="staff.jpg" alt="スタッフ" />
+  <img src="sagyou.jpg" alt="作業風景" />
+
+  <!-- 準備中の画像を示すダミーボックス -->
+  <div class="placeholder">イベントの画像準備中</div>
+
+</body>
+</html>
+ <h2>アクセス</h2>
     <p>奈良県奈良市南京終町1-168-1</p>
     <p>・万葉まほろば線 京都終駅から徒歩6分</p>
     <p>・大和路線・奈良線 奈良駅から徒歩17分</p>
