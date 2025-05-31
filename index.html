@@ -13,10 +13,19 @@
       color: #333;
     }
     header {
+      position: relative;
       background-color: #007acc;
       color: white;
       padding: 2rem;
       text-align: center;
+      overflow: hidden;
+    }
+    #logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      height: 50px; /* ロゴの高さを調整 */
+      width: auto;
     }
     nav ul {
       list-style: none;
@@ -72,6 +81,7 @@
 </head>
 <body>
   <header>
+    <img src="logo.jpg" alt="アリーノ ロゴ" id="logo" />
     <h1>就労継続支援B型 アリーノ</h1>
     <p>奈良市にある安心・自立への第一歩を支える福祉事業所</p>
   </header>
@@ -86,11 +96,8 @@
   </nav>
 
   <section>
-
-    <!-- 施設外観画像をここに追加 -->
     <div style="text-align: center; margin-bottom: 2rem;">
       <img src="gaikan.jpg" alt="施設外観" style="width: 100%; max-width: 400px; height: auto;" />
-    
     </div>
 
     <h2>基本情報</h2>
