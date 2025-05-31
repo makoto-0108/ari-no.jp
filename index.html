@@ -122,7 +122,43 @@
     <h2>ギャラリー（準備中）</h2>
     <img src="staff.jpg" alt="スタッフ" />
     <img src="sagyou.jpg" alt="作業風景" />
-    <img src="event1.jpg"alt="イベント" />
+    <!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>画像3つ横並び</title>
+<style>
+  .image-row {
+    display: flex;             /* 横並びにする */
+    gap: 15px;                 /* 画像同士の間隔 */
+    justify-content: center;   /* 真ん中寄せ */
+    margin: 20px 0;
+  }
+  .image-row img {
+    width: 30%;                /* 画像幅を30%に */
+    height: auto;              /* 高さは自動調整 */
+    object-fit: cover;         /* 画像の切れを防ぐ */
+    border-radius: 8px;        /* 角丸 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* 軽い影 */
+    transition: transform 0.3s ease; /* ホバー時のアニメ */
+  }
+  .image-row img:hover {
+    transform: scale(1.05);    /* ホバーで少し拡大 */
+  }
+</style>
+</head>
+<body>
+
+<div class="image-row">
+  <img src="event1.jpg" alt="イベント" />
+  <img src="event2.jpg" alt="イベント2" />
+  <img src="event3.jpg" alt="イベント3" />
+</div>
+
+</body>
+</html>
+
 
     <h2>アクセス</h2>
     <p>奈良県奈良市南京終町1-168-1</p>
