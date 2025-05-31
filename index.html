@@ -18,14 +18,15 @@
       padding: 1rem 0;
       text-align: center;
     }
-    header img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      max-height: 400px;
-      margin-bottom: 1rem;
-    }
+   header img {
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
     nav ul {
       list-style: none;
       padding: 0;
@@ -49,3 +50,59 @@
       padding: 2rem;
       max-width: 900px;
       margin: auto;
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #005f99;
+      border-bottom: 2px solid #a0cfee;
+      padding-bottom: 0.3rem;
+    }
+    .info-box {
+      background-color: #e6f4ff;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 5px solid #007acc;
+    }
+    footer {
+      background-color: #007acc;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>就労継続支援B型 アリーノ</h1>
+    <img src="gaikan.jpg" alt="事業所の外観" />
+    <p>奈良市にある安心・自立への第一歩を支える福祉事業所</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="about.html">事業所紹介</a></li>
+      <li><a href="entry.html">利用者様募集</a></li>
+      <li><a href="recruit.html">採用情報</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>基本情報</h2>
+    <div class="info-box">
+      <p><strong>所在地：</strong>奈良県奈良市南京終町1丁目168-1</p>
+      <p><strong>営業時間：</strong>9:00～17:00</p>
+      <p><strong>電話番号：</strong>06-6575-7647</p>
+    </div>
+    <!-- 以下、他のコンテンツを続けてください -->
+  </section>
+
+  <footer>
+    <p>&copy; 2025 就労継続支援B型 アリーノ</p>
+  </footer>
+</body>
+</html>
