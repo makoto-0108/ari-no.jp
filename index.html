@@ -27,21 +27,21 @@
     }
 
     /* ここを追加・修正 */
-    header h1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5em;
-      margin: 0;
-      padding: 0;
-      white-space: nowrap;
-      max-width: 100%;
-      overflow-wrap: break-word;
-      user-select: none;
-      font-size: 2rem;
-      flex-grow: 1; /* 元のコードに合わせて中央寄せ維持 */
-      text-align: center;
-    }
+   header h1 {
+  border: 2px solid #4D90AB;  /* 枠線 */
+  border-radius: 8px;
+  padding: 0.3em 1em;
+  max-width: 600px;           /* 最大幅 */
+  margin: 0 auto;             /* 中央寄せ */
+  font-weight: bold;
+  color: #4D90AB;
+  font-size: 2rem;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;        /* 折り返しを許可 */
+  display: inline-block;      /* 横幅の調整 */
+}
+
 
     header h1 span:first-child {
       color: #4D90AB;
@@ -205,11 +205,10 @@
 
 <body>
   <header>
-    <h1>
-      <span>就労継続支援B型</span>
-      <span>アリーノ</span>
-    </h1>
-  </header>
+<header>
+  <h1>就労継続支援B型 アリーノ</h1>
+</header>
+ 
 
   <nav>
     <ul>
