@@ -22,13 +22,32 @@
     text-align: center;
     overflow: hidden;
   }
+ /* PCやタブレットは今まで通り */
+#logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: 150px;
+  width: auto;
+}
+
+/* スマホ（768px以下）でロゴの位置をリセットし中央表示に */
+@media (max-width: 768px) {
   #logo {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    height: 150px;
-    width: auto;
+    position: static; /* 絶対配置を解除 */
+    display: block;
+    margin: 0 auto 1rem auto;
+    height: 120px;
   }
+}
+
+/* もしスマホ時にロゴが重複しているなら */
+@media (max-width: 768px) {
+  /* ここでダブっているロゴを非表示にする例 */
+  /* 例えばヘッダー内の別ロゴがあれば以下のようにidやclassを指定し非表示に */
+  /* .header-logo-duplicate { display: none; } */
+}
+
   nav ul {
     list-style: none;
     padding: 0;
