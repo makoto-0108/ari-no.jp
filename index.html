@@ -18,57 +18,76 @@
 
     /* ヘッダー：横並びで中央揃え */
     header {
-  display: flex;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  background-color: #007acc;
-  color: white;
-  position: relative;
-}
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: #007acc;
+      color: white;
+      position: relative;
+    }
 
+    /* ここを追加・修正 */
+    header h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5em;
+      margin: 0;
+      padding: 0;
+      white-space: nowrap;
+      max-width: 100%;
+      overflow-wrap: break-word;
+      user-select: none;
+      font-size: 2rem;
+      flex-grow: 1; /* 元のコードに合わせて中央寄せ維持 */
+      text-align: center;
+    }
 
+    header h1 span:first-child {
+      color: #4D90AB;
+      border: 2px solid #4D90AB;
+      padding: 0.2em 0.5em;
+      border-radius: 6px;
+      background-color: #eaf6fb;
+      font-weight: bold;
+    }
 
-#main-title {
-  flex-grow: 1;
-  text-align: center;
-  margin: 0;
-  font-size: 2rem;
-  user-select: none;
-}
+    header h1 span:last-child {
+      color: #6BAA87;
+    }
 
-nav {
-  background-color: #007acc;
-  padding: 0.5rem 0;
-}
+    nav {
+      background-color: #007acc;
+      padding: 0.5rem 0;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+    }
 
-nav ul li a.button-link {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #4D90AB;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
+    nav ul li a.button-link {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #4D90AB;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
 
-nav ul li a.button-link:hover,
-nav ul li a.button-link:focus {
-  background-color: #357ABD;
-  outline: none;
-  box-shadow: 0 0 8px #357ABD;
-}
-
+    nav ul li a.button-link:hover,
+    nav ul li a.button-link:focus {
+      background-color: #357ABD;
+      outline: none;
+      box-shadow: 0 0 8px #357ABD;
+    }
 
     /* セクション */
     section {
@@ -124,12 +143,8 @@ nav ul li a.button-link:focus {
         padding: 1.5rem 1rem;
       }
 
-  
-
-      #title-container h1 {
-        max-width: 100%;
-        display: block;
-        margin: 0 auto;
+      header h1 {
+        white-space: normal; /* スマホで折り返し可能に */
       }
 
       nav ul {
@@ -190,32 +205,20 @@ nav ul li a.button-link:focus {
 
 <body>
   <header>
- 
-  <h1>
-  <span style="
-    color: #4D90AB;
-    border: 2px solid #4D90AB;
-    padding: 0.2em 0.5em;
-    border-radius: 6px;
-    background-color: #eaf6fb;
-    font-weight: bold;
-  ">
-    就労継続支援B型
-  </span>
-  <span style="color: #6BAA87;">アリーノ</span>
-</h1>
+    <h1>
+      <span>就労継続支援B型</span>
+      <span>アリーノ</span>
+    </h1>
+  </header>
 
-</header>
-
-<nav>
-  <ul>
-    <li><a href="index.html" class="button-link">ホーム</a></li>
-    <li><a href="about.html" class="button-link">事業所紹介</a></li>
-    <li><a href="entry.html" class="button-link">利用者様募集</a></li>
-    <li><a href="contact.html" class="button-link">お問い合わせ</a></li>
-  </ul>
-</nav>
-
+  <nav>
+    <ul>
+      <li><a href="index.html" class="button-link">ホーム</a></li>
+      <li><a href="about.html" class="button-link">事業所紹介</a></li>
+      <li><a href="entry.html" class="button-link">利用者様募集</a></li>
+      <li><a href="contact.html" class="button-link">お問い合わせ</a></li>
+    </ul>
+  </nav>
 
   <section>
     <h2>本社情報</h2>
@@ -263,4 +266,17 @@ nav ul li a.button-link:focus {
 
     <!-- Googleマップ埋め込み -->
     <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.986341897222!2d135.79925231525843!3d34.66658128043919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.986341897222!2d135.79925231525843!3d34.66658128043919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f"
+      width="600"
+      height="450"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 就労継続支援B型 アリーノ
+  </footer>
+</body>
+</html>
