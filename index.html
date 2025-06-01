@@ -18,72 +18,57 @@
 
     /* ヘッダー：横並びで中央揃え */
     header {
-      display: flex;
-      align-items: center;       /* 縦方向中央揃え */
-      justify-content: center;   /* 横方向中央揃え */
-      gap: 1.5rem;               /* ロゴと文字の間 */
-      padding: 2rem;
-      background-color: #007acc;
-      color: white;
-      text-align: left;          /* テキストは左寄せ */
-      position: relative;
-      flex-wrap: wrap;           /* 幅狭いときは折り返し */
-    }
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: #007acc;
+  color: white;
+  position: relative;
+}
 
-    /* ロゴ */
-    #logo {
-      position: static;           /* 絶対配置解除 */
-      height: 150px;
-      width: auto;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-      flex-shrink: 0;
-    }
 
-    /* タイトルコンテナ */
-    #title-container {
-      max-width: 500px;
-    }
 
-    #title-container h1 {
-      margin: 0 0 0.3rem 0;
-      background-color: #eaf6fb;
-      color: #333;
-      padding: 0.5em 1em;
-      border-radius: 8px;
-      border: 2px solid #4D90AB;
-      display: inline-block;
-    }
+#main-title {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 2rem;
+  user-select: none;
+}
 
-    /* ナビゲーション */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background-color: #007acc;
-    }
+nav {
+  background-color: #007acc;
+  padding: 0.5rem 0;
+}
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      background-color: #007acc;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 1rem 1.5rem;
-      display: block;
-    }
+nav ul li a.button-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #4D90AB;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
-    nav ul li a:hover {
-      background-color: #005f99;
-      border-radius: 4px;
-    }
+nav ul li a.button-link:hover,
+nav ul li a.button-link:focus {
+  background-color: #357ABD;
+  outline: none;
+  box-shadow: 0 0 8px #357ABD;
+}
+
 
     /* セクション */
     section {
@@ -139,10 +124,7 @@
         padding: 1.5rem 1rem;
       }
 
-      #logo {
-        height: 120px;
-        margin-bottom: 1rem;
-      }
+  
 
       #title-container h1 {
         max-width: 100%;
@@ -208,24 +190,22 @@
 
 <body>
   <header>
-    <img src="logo.jpg" alt="アリーノ ロゴ" id="logo" />
-    <div id="title-container">
-      <h1>
-        <span style="color: #4D90AB; font-weight: bold;">就労継続支援B型</span>
-        <span style="color: #6BAA87; font-weight: bold;"> アリーノ</span>
-      </h1>
-      <p>奈良市にある安心・自立への第一歩を支える福祉事業所</p>
-    </div>
-  </header>
+ 
+  <h1 id="main-title">
+    <span style="color: #4D90AB; font-weight: bold;">就労継続支援B型</span>
+    <span style="color: #6BAA87; font-weight: bold;"> アリーノ</span>
+  </h1>
+</header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html" class="button-link">ホーム</a></li>
-      <li><a href="about.html" class="button-link">事業所紹介</a></li>
-      <li><a href="entry.html" class="button-link">利用者様募集</a></li>
-      <li><a href="contact.html" class="button-link">お問い合わせ</a></li>
-    </ul>
-  </nav>
+<nav>
+  <ul>
+    <li><a href="index.html" class="button-link">ホーム</a></li>
+    <li><a href="about.html" class="button-link">事業所紹介</a></li>
+    <li><a href="entry.html" class="button-link">利用者様募集</a></li>
+    <li><a href="contact.html" class="button-link">お問い合わせ</a></li>
+  </ul>
+</nav>
+
 
   <section>
     <h2>本社情報</h2>
