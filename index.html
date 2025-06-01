@@ -67,6 +67,13 @@
     background-color: #005f99;
     border-radius: 4px;
   }
+      nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* 前に出す */
+  background-color: #007acc; /* 背景色を付けて下のコンテンツが透けないように */
+}
+
   section {
     padding: 2rem;
     max-width: 900px;
@@ -243,7 +250,8 @@
 
   <section>
     <h2>お問い合わせ</h2>
-    <p>電話番号：06-6575-7647<br>
+    <p><p><strong>電話番号：</strong><a href="tel:0665757647">06-6575-7647</a></p>
+<br>
     ご利用や見学に関するご質問・ご相談など、お気軽にお問い合わせください。</p>
 
   </section>
