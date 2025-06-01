@@ -20,13 +20,12 @@
     }
 
     .image-box img {
-  width: 300px;  /* 横幅を300pxに統一 */
-  height: 200px; /* 高さも固定 */
-  object-fit: cover; /* 画像のアスペクト比を保ちつつ切り抜き */
-  border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-}
-
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
 
     .image-box p {
       color: #666666;
@@ -183,6 +182,16 @@
         padding: 1rem 0.5rem;
         font-size: 0.9rem;
       }
+
+      /* 画像サイズ調整（スマホ用） */
+      .image-box img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .image-box {
+        width: 45%;
+      }
     }
 
     @media (max-width: 480px) {
@@ -204,6 +213,16 @@
 
       h2 {
         font-size: 1.2rem;
+      }
+
+      /* 画像サイズ調整（さらに小さい画面） */
+      .image-box img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .image-box {
+        width: 100%;
       }
     }
   </style>
@@ -247,15 +266,15 @@
     <p>定期的にお菓子パーティやビンゴ大会などを開催。皆広い年代の方が楽しく交流しています。</p>
     <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
       <div class="image-box">
-        <img src="event1.jpg" alt="お菓子パーティの様子" style="width: 30%;" />
+        <img src="event1.jpg" alt="お菓子パーティの様子" />
         <p>お菓子パーティの様子</p>
       </div>
       <div class="image-box">
-        <img src="event2.jpg" alt="ビンゴ大会の様子" style="width: 30%;" />
+        <img src="event2.jpg" alt="ビンゴ大会の様子" />
         <p>たこ焼きパーティーの様子</p>
       </div>
       <div class="image-box">
-        <img src="event3.jpg" alt="利用者の交流風景" style="width: 30%;" />
+        <img src="event3.jpg" alt="利用者の交流風景" />
         <p>作ったたこ焼き</p>
       </div>
     </div>
