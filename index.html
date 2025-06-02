@@ -7,13 +7,19 @@
   <style>
     /* 画像サイズ調整（さらに小さい画面） */
     .image-box img {
-      width: 120px;
-      height: 120px;
-    }
+  width: 100%;         /* 親の幅に合わせる */
+  max-width: 120px;    /* 最大幅は120pxまで */
+  height: auto;        /* 縦横比を保つ */
+  display: block;      /* ブロック要素にして中央寄せ可能に */
+  margin: 0 auto;      /* 画像を中央に配置 */
+}
 
-    .image-box {
-      width: 100%;
-    }
+.image-box {
+  flex: 1 1 120px;     /* 横並びを調整しやすく */
+  max-width: 120px;    /* 最大幅120px */
+  text-align: center;  /* 画像下のテキストを中央揃え */
+}
+
 
     /* ボタンスタイル */
     .btn {
@@ -33,26 +39,26 @@
     }
 
     /* ナビゲーションメニューを横並びに */
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1rem;
-    }
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+nav ul li a:hover {
+  background-color: #81d4fa;
+  color: white;
+}
 
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav ul li a:hover {
-      background-color: #81d4fa;
-      color: white;
-    }
 
     /* セクションの余白調整 */
     section {
