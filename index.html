@@ -2,11 +2,66 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>就労継続支援B型 アリーノ</title>
-  <!-- Google Fonts Noto Sans JP -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
   <style>
+    /* 画像サイズ調整（さらに小さい画面） */
+    .image-box img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .image-box {
+      width: 100%;
+    }
+
+    /* ボタンスタイル */
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background-color: #81d4fa;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #4fc3f7;
+    }
+
+    /* ナビゲーションメニューを横並びに */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #81d4fa;
+      color: white;
+    }
+
+    /* セクションの余白調整 */
+    section {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    /* ギャラリーの画像配置 */
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -15,215 +70,18 @@
     }
 
     .image-box {
-      width: 30%;
+      flex: 1 1 120px;
+      max-width: 120px;
       text-align: center;
-    }
-
-    .image-box img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 4px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-    }
-
-    .image-box p {
-      color: #666666;
-      font-size: 0.9em;
-      margin-top: 6px;
-      font-family: 'Noto Sans JP', sans-serif;
-    }
-
-    /* ベース設定 */
-    body {
-      font-family: 'Noto Sans JP', sans-serif;
-      line-height: 1.8;
-      margin: 0;
-      background-color: #f0f8ff;
-      color: #333;
-    }
-
-    /* ヘッダー：横並びで中央揃え */
-    header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1.5rem 2rem;
-      background-color: #007acc;
-      color: white;
-    }
-
-    header h1 {
-      border: 2px solid #ffffff;
-      border-radius: 8px;
-      padding: 0.3em 1em;
-      font-weight: bold;
-      font-size: 2rem;
-      line-height: 1.4;
-      text-align: center;
-      background-color: #ffffff;
-      color: #007acc;
-    }
-
-    nav {
-      background-color: #007acc;
-      padding: 0.5rem 0;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav ul li a.button-link {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background-color: #4D90AB;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    nav ul li a.button-link:hover,
-    nav ul li a.button-link:focus {
-      background-color: #357ABD;
-      outline: none;
-      box-shadow: 0 0 8px #357ABD;
-    }
-
-    /* セクション */
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #005f99;
-      border-bottom: 2px solid #a0cfee;
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-    }
-
-    .info-box {
-      background-color: #e6f4ff;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-left: 5px solid #007acc;
     }
 
     footer {
-      background-color: #007acc;
-      color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-
-    img {
-      border-radius: 4px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-      max-width: 100%;
-      height: auto;
-    }
-
-    iframe {
-      display: block;
-      margin: 1rem auto;
-      max-width: 100%;
-      border: none;
-    }
-
-    /* ===== レスポンシブ対応 ===== */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem 1rem;
-      }
-
-      nav ul {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-
-      nav ul li a {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-      }
-
-      section {
-        padding: 1rem;
-        margin: 1rem 1rem;
-        max-width: 100%;
-      }
-
-      h2 {
-        font-size: 1.4rem;
-        margin-top: 1.5rem;
-      }
-
-      .info-box {
-        padding: 0.8rem;
-        margin: 0.8rem 0;
-      }
-
-      footer {
-        padding: 1rem 0.5rem;
-        font-size: 0.9rem;
-      }
-
-      /* 画像サイズ調整（スマホ用） */
-      .image-box img {
-        width: 150px;
-        height: 150px;
-      }
-
-      .image-box {
-        width: 45%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      nav ul {
-        flex-direction: column;
-        gap: 0;
-      }
-
-      nav ul li a {
-        border-bottom: 1px solid #005f99;
-        border-radius: 0;
-        padding: 0.8rem 0;
-        text-align: center;
-      }
-
-      section ul li {
-        font-size: 0.9rem;
-      }
-
-      h2 {
-        font-size: 1.2rem;
-      }
-
-      /* 画像サイズ調整（さらに小さい画面） */
-      .image-box img {
-        width: 120px;
-        height: 120px;
-      }
-
-      .image-box {
-        width: 100%;
-      }
+      padding: 1rem 0;
+      background-color: #f0f0f0;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
@@ -300,6 +158,9 @@
     <p>まずはお気軽にお電話ください。<br>
     <strong>06-6575-7647</strong><br>
     就労継続支援B型事業所 アリーノ</p>
+
+    <a href="contact.html" class="btn">お問い合わせはこちら</a>
+
   </section>
 
   <footer>
