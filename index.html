@@ -2,119 +2,210 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>就労継続支援B型 アリーノ</title>
+  <!-- Google Fonts Noto Sans JP -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
   <style>
-    /* 画像サイズ調整（さらに小さい画面） */
-    .image-box img {
-  width: 100%;         /* 親の幅に合わせる */
-  max-width: 120px;    /* 最大幅は120pxまで */
-  height: auto;        /* 縦横比を保つ */
-  display: block;      /* ブロック要素にして中央寄せ可能に */
-  margin: 0 auto;      /* 画像を中央に配置 */
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    background-color: #f0f8ff;
+    color: #333;
+  }
+  header {
+    position: relative;
+    background-color: #007acc;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+  }
+ /* PCやタブレットは今まで通り */
+#logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: 150px;
+  width: auto;
 }
 
-.image-box {
-  flex: 1 1 120px;     /* 横並びを調整しやすく */
-  max-width: 120px;    /* 最大幅120px */
-  text-align: center;  /* 画像下のテキストを中央揃え */
+/* スマホ（768px以下）でロゴの位置をリセットし中央表示に */
+@media (max-width: 768px) {
+  #logo {
+    position: static; /* 絶対配置を解除 */
+    display: block;
+    margin: 0 auto 1rem auto;
+    height: 120px;
+  }
 }
 
+/* もしスマホ時にロゴが重複しているなら */
+@media (max-width: 768px) {
+  /* ここでダブっているロゴを非表示にする例 */
+  /* 例えばヘッダー内の別ロゴがあれば以下のようにidやclassを指定し非表示に */
+  /* .header-logo-duplicate { display: none; } */
+}
 
-    /* ボタンスタイル */
-    .btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background-color: #81d4fa;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    background-color: #007acc;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    display: block;
+  }
+  nav ul li a:hover {
+    background-color: #005f99;
+    border-radius: 4px;
+  }
+      nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* 前に出す */
+  background-color: #007acc; /* 背景色を付けて下のコンテンツが透けないように */
+}
+
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  h2 {
+    color: #005f99;
+    border-bottom: 2px solid #a0cfee;
+    padding-bottom: 0.3rem;
+    margin-top: 2rem;
+  }
+  .info-box {
+    background-color: #e6f4ff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 5px solid #007acc;
+  }
+  footer {
+    background-color: #007acc;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  img {
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  }
+  iframe {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+    border: none;
+  }
+
+  /* ===== レスポンシブ対応 ===== */
+  @media (max-width: 768px) {
+    #logo {
+      position: static;
+      display: block;
+      margin: 0 auto 1rem auto;
+      height: 120px;
     }
-
-    .btn:hover {
-      background-color: #4fc3f7;
+    header {
+      padding: 1.5rem 1rem;
+      text-align: center;
     }
-
-    /* ナビゲーションメニューを横並びに */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1rem;
-}
-nav ul li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  color: #333;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-nav ul li a:hover {
-  background-color: #81d4fa;
-  color: white;
-}
-
-
-    /* セクションの余白調整 */
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-
-    /* ギャラリーの画像配置 */
-    .gallery {
-      display: flex;
+    nav ul {
       flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
+      gap: 0.5rem;
     }
-
-    .image-box {
-      flex: 1 1 120px;
-      max-width: 120px;
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background-color: #f0f0f0;
-      margin-top: 3rem;
+    nav ul li a {
+      padding: 0.8rem 1rem;
       font-size: 0.9rem;
-      color: #666;
     }
-  </style>
+    section {
+      padding: 1rem;
+      margin: 1rem 1rem;
+      max-width: 100%;
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+    }
+    .info-box {
+      padding: 0.8rem;
+      margin: 0.8rem 0;
+    }
+    footer {
+      padding: 1rem 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    nav ul {
+      flex-direction: column;
+      gap: 0;
+    }
+    nav ul li a {
+      border-bottom: 1px solid #005f99;
+      border-radius: 0;
+      padding: 0.8rem 0;
+      text-align: center;
+    }
+    section ul li {
+      font-size: 0.9rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
 </head>
+
 <body>
   <header>
+    <img src="logo.jpg" alt="アリーノ ロゴ" id="logo" />
     <h1>就労継続支援B型 アリーノ</h1>
+    <p>奈良市にある安心・自立への第一歩を支える福祉事業所</p>
   </header>
 
   <nav>
     <ul>
-      <li><a href="index.html" class="button-link">ホーム</a></li>
-      <li><a href="about.html" class="button-link">事業所紹介</a></li>
-      <li><a href="entry.html" class="button-link">ご利用をご検討の方へ</a></li>
-      <li><a href="contact.html" class="button-link">お問い合わせ</a></li>
-      <li><a href="access.html" class="button-link">アクセス</a></li>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="about.html">事業所紹介</a></li>
+      <li><a href="entry.html">ご利用をご検討の方へ</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
     </ul>
   </nav>
 
   <section>
-    <h2>アリーノの理念・特徴</h2>
-    <p><strong>就労継続支援B型事業所 アリーノ</strong>は、奈良市にある障がいのある方の就労を支援する事業所です。</p>
-    <p>小さくても、静かでも、まっすぐな思いは天に届く。<br>
-       その信念を、<strong>「アリーノ」</strong>という名前に込めました。<br>
-       私たちは、一人ひとりの歩みに寄り添い、共に希望の道をつくっていきます。</p>
-    <p>就労が困難な方でも、ご自身のペースで日中の居場所としてご利用いただけます。<strong><br>
-        介護福祉士・救急救命士</strong>のスタッフが常駐しており、安心して過ごせる環境を整えています。</p>
-    <p>☆<strong>無料送迎</strong>もあります（送迎範囲はご相談ください）</p>
+    <h2>基本情報</h2>
+    <div class="info-box">
+      <p><strong>所在地：</strong>奈良県奈良市南京終町1丁目168-1</p>
+      <p><strong>営業時間：</strong>9:00～17:00</p>
+      <p><strong>電話番号：</strong>06-6575-7647</p>
+    </div>
+
+    <h2>理念・特徴</h2>
+    <p>就労継続支援B型事業所 アリーノは、奈良市にある障がいのある方の就労を支援する事業所です。</p>
+        <p>
+  小さくても、静かでも、まっすぐな思いは天に届く。<br>
+  その信念を、「アリーノ」という名前に込めました。<br>
+  私たちは、一人ひとりの歩みに寄り添い、共に希望の道をつくっていきます。
+</p>
+    <p>就労が困難な方でも、ご自身のペースで日中の居場所としてご利用いただけます。介護福祉士・救急救命士のスタッフが常駐しており、安心して過ごせる環境を整えています。</p>
+    <p>☆無料送迎もあります（送迎範囲はご相談ください）</p>
 
     <h2>作業内容</h2>
     <p>利用者一人ひとりに合った軽作業を提供しています。</p>
@@ -128,49 +219,45 @@ nav ul li a:hover {
 
     <h2>イベント紹介</h2>
     <p>定期的にお菓子パーティやビンゴ大会などを開催。皆広い年代の方が楽しく交流しています。</p>
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-      <div class="image-box">
-        <img src="event1.jpg" alt="お菓子パーティの様子" />
-        <p>お菓子パーティの様子</p>
-      </div>
-      <div class="image-box">
-        <img src="event2.jpg" alt="ビンゴ大会の様子" />
-        <p>たこ焼きパーティーの様子</p>
-      </div>
-      <div class="image-box">
-        <img src="event3.jpg" alt="利用者の交流風景" />
-        <p>作ったたこ焼き</p>
-      </div>
-    </div>
 
     <h2>ギャラリー</h2>
-    <div class="gallery">
-      <div class="image-box">
-        <img src="gaikan.jpg" alt="施設外観" />
-        <p>施設の外観。明るく清潔な環境です。</p>
-      </div>
-      <div class="image-box">
-        <img src="staff.jpg" alt="スタッフ" />
-        <p>親切で頼れるスタッフが常駐しています。</p>
-      </div>
-      <div class="image-box">
-        <img src="sagyou.jpg" alt="作業風景" />
-        <p>利用者様が作業に取り組んでいる様子。</p>
-      </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+      <img src="gaikan.jpg" alt="施設外観" style="width: 30%;" />
+      <img src="staff.jpg" alt="スタッフ" style="width: 30%;" />
+      <img src="sagyou.jpg" alt="作業風景" style="width: 30%;" />
+      <img src="event1.jpg" alt="お菓子パーティの様子" style="width: 30%;" />
+      <img src="event2.jpg" alt="ビンゴ大会の様子" style="width: 30%;" />
+      <img src="event3.jpg" alt="利用者の交流風景" style="width: 30%;" />
     </div>
 
-    <h2>お問い合わせ</h2>
-    <p>就労継続支援B型事業所アリーノでは利用者さんを随時募集しております。施設見学や体験利用などお気軽にお問い合わせください。</p>
-    <p>まずはお気軽にお電話ください。<br>
-    <strong>06-6575-7647</strong><br>
-    就労継続支援B型事業所 アリーノ</p>
+    <h2>アクセス</h2>
+    <p>奈良県奈良市南京終町1-168-1</p>
+    <p>・万葉まほろば線 京都終駅から徒歩6分</p>
+    <p>・大和路線・奈良線 奈良駅から徒歩17分</p>
 
-    <a href="contact.html" class="btn">お問い合わせはこちら</a>
+
+    <!-- ここからGoogleマップの埋め込み -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.986341897222!2d135.79925231525843!3d34.66658128043919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108aa2bcfc081%3A0x9dca1e8541f3827a!2z5pel5pys44K544OI44OG44K544Kz5a6u5aSn6LC35LiK5bGx77yR77yW!5e0!3m2!1sja!2sjp!4v1685563608179!5m2!1sja!2sjp"
+      width="100%"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <section>
+    <h2>お問い合わせ</h2>
+    <p><p><strong>電話番号：</strong><a href="tel:0665757647">06-6575-7647</a></p>
+<br>
+    ご利用や見学に関するご質問・ご相談など、お気軽にお問い合わせください。</p>
 
   </section>
 
   <footer>
-    &copy; 2025 就労継続支援B型 アリーノ
+    <p>&copy; 就労継続支援B型 アリーノ</p>
   </footer>
 </body>
 </html>
