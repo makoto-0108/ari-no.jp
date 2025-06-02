@@ -169,6 +169,49 @@
       font-size: 1.2rem;
     }
   }
+  /* ギャラリースライダー用 */
+.slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 12); /* 画像12枚分 */
+  animation: scroll 30s linear infinite;
+}
+
+.slide {
+  width: 250px;
+  height: auto;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* スマホでのスライダー対応 */
+@media (max-width: 768px) {
+  .slide {
+    width: 180px;
+  }
+  .slide-track {
+    width: calc(180px * 12);
+  }
+}
+
 </style>
 
 </head>
@@ -201,10 +244,11 @@
     <h2>理念・特徴</h2>
     <p><strong>就労継続支援B型事業所 アリーノ</strong>は、奈良市にある障がいのある方の就労を支援する事業所です。</p>
         <p>
-  <p><strong>小さくても、静かでも、まっすぐな思いは天に届く。</strong></p>
-  その信念を、<strong>「アリーノ」</strong>という名前に込めました。<br>
-  私たちは、一人ひとりの歩みに寄り添い、共に希望の道をつくっていきます。
-</p>
+  <p><strong>就労継続支援B型事業所 アリーノ</strong>は、奈良市にある障がいのある方の就労を支援する事業所です。</p>
+<p><strong>小さくても、静かでも、まっすぐな思いは天に届く。</strong><br>
+その信念を、<strong>「アリーノ」</strong>という名前に込めました。<br>
+私たちは、一人ひとりの歩みに寄り添い、共に希望の道をつくっていきます。</p>
+
     <p>就労が困難な方でも、ご自身のペースで日中の居場所としてご利用いただけます。</p>
     </p> 介護福祉士・救急救命士のスタッフが常駐しており、安心して過ごせる環境を整えています。</p>
    
@@ -226,17 +270,27 @@
     <h2>イベント紹介</h2>
     <p>定期的にお菓子パーティやビンゴ大会などを開催。皆広い年代の方が楽しく交流しています。</p>
 
-    <h2>ギャラリー</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-      <img src="event1.jpg" alt="お菓子パーティの様子" style="width: 30%;" />
-      <img src="event2.jpg" alt="ビンゴ大会の様子" style="width: 30%;" />
-      <img src="event3.jpg" alt="利用者の交流風景" style="width: 30%;" />
-       <img src="event4.jpg" alt="クリスマスパーティーの交流風景" style="width: 30%;" />
-        <img src="event5.jpg" alt="ハロウィン飾り付け" style="width: 30%;" />
-        <img src="event6.jpg" alt="ハロウィンパーティーの交流風景" style="width: 30%;" />
-        
-
+   <section id="gallery">
+  <h2>ギャラリー</h2>
+  <div class="slider">
+    <div class="slide-track">
+      <!-- 画像12枚：6枚×2セット（ループのため） -->
+      <img src="event1.jpg" alt="" class="slide">
+      <img src="event2.jpg" alt="" class="slide">
+      <img src="event3.jpg" alt="" class="slide">
+      <img src="event4.jpg" alt="" class="slide">
+      <img src="event5.jpg" alt="" class="slide">
+      <img src="event6.jpg" alt="" class="slide">
+      <img src="event1.jpg" alt="" class="slide">
+      <img src="event2.jpg" alt="" class="slide">
+      <img src="event3.jpg" alt="" class="slide">
+      <img src="event4.jpg" alt="" class="slide">
+      <img src="event5.jpg" alt="" class="slide">
+      <img src="event6.jpg" alt="" class="slide">
     </div>
+  </div>
+</section>
+
 
     <h2>アクセス</h2>
     奈良県奈良市南京終町1-168-1<br>
