@@ -4,175 +4,173 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>就労継続支援B型 アリーノ</title>
-  <!-- Google Fonts Noto Sans JP -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
   <style>
-  body {
-    font-family: 'Noto Sans JP', sans-serif;
-    line-height: 1.8;
-    margin: 0;
-    background-color: #f0f8ff;
-    color: #333;
-  }
-  header {
-    position: relative;
-    background-color: #007acc;
-    color: white;
-    padding: 2rem;
-    text-align: center;
-    overflow: hidden;
-  }
- /* PCやタブレットは今まで通り */
-#logo {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  height: 150px;
-  width: auto;
-}
-
-/* スマホ（768px以下）でロゴの位置をリセットし中央表示に */
-@media (max-width: 768px) {
-  #logo {
-    position: static; /* 絶対配置を解除 */
-    display: block;
-    margin: 0 auto 1rem auto;
-    height: 120px;
-  }
-}
-
-/* もしスマホ時にロゴが重複しているなら */
-@media (max-width: 768px) {
-  /* ここでダブっているロゴを非表示にする例 */
-  /* 例えばヘッダー内の別ロゴがあれば以下のようにidやclassを指定し非表示に */
-  /* .header-logo-duplicate { display: none; } */
-}
-
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    background-color: #007acc;
-  }
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 1rem 1.5rem;
-    display: block;
-  }
-  nav ul li a:hover {
-    background-color: #005f99;
-    border-radius: 4px;
-  }
-      nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* 前に出す */
-  background-color: #007acc; /* 背景色を付けて下のコンテンツが透けないように */
-}
-
-  section {
-    padding: 2rem;
-    max-width: 900px;
-    margin: auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  h2 {
-    color: #005f99;
-    border-bottom: 2px solid #a0cfee;
-    padding-bottom: 0.3rem;
-    margin-top: 2rem;
-  }
-  .info-box {
-    background-color: #e6f4ff;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-left: 5px solid #007acc;
-  }
-  footer {
-    background-color: #007acc;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
-  }
-  img {
-    border-radius: 4px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
-  }
-  iframe {
-    display: block;
-    margin: 1rem auto;
-    max-width: 100%;
-    border: none;
-  }
-
-  /* ===== レスポンシブ対応 ===== */
-  @media (max-width: 768px) {
-    #logo {
-      position: static;
-      display: block;
-      margin: 0 auto 1rem auto;
-      height: 120px;
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      line-height: 1.8;
+      margin: 0;
+      background-color: #f0f8ff;
+      color: #333;
     }
+
     header {
-      padding: 1.5rem 1rem;
+      position: relative;
+      background-color: #007acc;
+      color: white;
+      padding: 2rem;
       text-align: center;
+      overflow: hidden;
     }
+
+    #logo {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      height: 150px;
+      width: auto;
+    }
+
+    @media (max-width: 768px) {
+      #logo {
+        position: static;
+        display: block;
+        margin: 0 auto 1rem auto;
+        height: 120px;
+      }
+
+      header {
+        padding: 1.5rem 1rem;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      nav ul li a {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      section {
+        padding: 1rem;
+        margin: 1rem 1rem;
+        max-width: 100%;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+      }
+
+      .info-box {
+        padding: 0.8rem;
+        margin: 0.8rem 0;
+      }
+
+      footer {
+        padding: 1rem 0.5rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0;
+      }
+
+      nav ul li a {
+        border-bottom: 1px solid #005f99;
+        border-radius: 0;
+        padding: 0.8rem 0;
+        text-align: center;
+      }
+
+      section ul li {
+        font-size: 0.9rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #007acc;
+    }
+
     nav ul {
-      flex-wrap: wrap;
-      gap: 0.5rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
     }
+
     nav ul li a {
-      padding: 0.8rem 1rem;
-      font-size: 0.9rem;
+      color: white;
+      text-decoration: none;
+      padding: 1rem 1.5rem;
+      display: block;
     }
+
+    nav ul li a:hover {
+      background-color: #005f99;
+      border-radius: 4px;
+    }
+
     section {
-      padding: 1rem;
-      margin: 1rem 1rem;
-      max-width: 100%;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+
     h2 {
-      font-size: 1.4rem;
-      margin-top: 1.5rem;
+      color: #005f99;
+      border-bottom: 2px solid #a0cfee;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
     }
+
     .info-box {
-      padding: 0.8rem;
-      margin: 0.8rem 0;
+      background-color: #e6f4ff;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 5px solid #007acc;
     }
+
     footer {
-      padding: 1rem 0.5rem;
-      font-size: 0.9rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    nav ul {
-      flex-direction: column;
-      gap: 0;
-    }
-    nav ul li a {
-      border-bottom: 1px solid #005f99;
-      border-radius: 0;
-      padding: 0.8rem 0;
+      background-color: #007acc;
+      color: white;
       text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
-    section ul li {
-      font-size: 0.9rem;
-    }
-    h2 {
-      font-size: 1.2rem;
-    }
-  }
-</style>
 
+    img {
+      border-radius: 4px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    }
+
+    iframe {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
+      border: none;
+    }
+  </style>
 </head>
-
 <body>
   <header>
     <img src="logo.jpg" alt="アリーノ ロゴ" id="logo" />
@@ -199,21 +197,19 @@
 
     <h2>理念・特徴</h2>
     <p>就労継続支援B型事業所 アリーノは、奈良市にある障がいのある方の就労を支援する事業所です。</p>
-        <p>
-  小さくても、静かでも、まっすぐな思いは天に届く。<br>
-  その信念を、「アリーノ」という名前に込めました。<br>
-  私たちは、一人ひとりの歩みに寄り添い、共に希望の道をつくっていきます。
-</p>
+    <p>
+      小さくても、静かでも、まっすぐな思いは天に届く。<br>
+      その信念を、「アリーノ」という名前に込めました。<br>
+      私たちは、一人ひとりの歩みに寄り添い、共に希望の道をつくっていきます。
+    </p>
     <p>就労が困難な方でも、ご自身のペースで日中の居場所としてご利用いただけます。介護福祉士・救急救命士のスタッフが常駐しており、安心して過ごせる環境を整えています。</p>
     <p>☆無料送迎もあります（送迎範囲はご相談ください）</p>
 
-   <section style="background-color: #e6f4e6; padding: 1.5em; border-radius: 8px;">
-  <h2>作業内容</h2>
-  <p>利用者一人ひとりに合った軽作業を提供しています。</p>
-  <p>一般就労を目指す方向けには独自の就労支援プログラムも実施中。</p>
-</section>
-
-
+    <section style="background-color: #e6f4e6; padding: 1.5em; border-radius: 8px;">
+      <h2>作業内容</h2>
+      <p>利用者一人ひとりに合った軽作業を提供しています。</p>
+      <p>一般就労を目指す方向けには独自の就労支援プログラムも実施中。</p>
+    </section>
 
     <h2>1日の流れ</h2>
     <ul>
@@ -222,16 +218,16 @@
     </ul>
 
     <h2>イベント紹介</h2>
-    <p>定期的にお菓子パーティやビンゴ大会などを開催。皆広い年代の方が楽しく交流しています。</p>
+    <p>定期的にお菓子パーティやビンゴ大会などを開催。広い年代の方が楽しく交流しています。</p>
 
-    <h2>ギャラリー</h2>
+    <h2>イベントでの様子はこちら</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-      <img src="gaikan.jpg" alt="施設外観" style="width: 30%;" />
-      <img src="staff.jpg" alt="スタッフ" style="width: 30%;" />
-      <img src="sagyou.jpg" alt="作業風景" style="width: 30%;" />
-      <img src="event1.jpg" alt="お菓子パーティの様子" style="width: 30%;" />
-      <img src="event2.jpg" alt="ビンゴ大会の様子" style="width: 30%;" />
-      <img src="event3.jpg" alt="利用者の交流風景" style="width: 30%;" />
+      <img src="event4.jpg" alt="イベント4" style="width: 30%;" />
+      <img src="event5.jpg" alt="イベント5" style="width: 30%;" />
+      <img src="event6.jpg" alt="イベント6" style="width: 30%;" />
+      <img src="event1.jpg" alt="イベント1" style="width: 30%;" />
+      <img src="event2.jpg" alt="イベント2" style="width: 30%;" />
+      <img src="event3.jpg" alt="イベント3" style="width: 30%;" />
     </div>
 
     <h2>アクセス</h2>
@@ -239,8 +235,6 @@
     <p>・万葉まほろば線 京都終駅から徒歩6分</p>
     <p>・大和路線・奈良線 奈良駅から徒歩17分</p>
 
-
-    <!-- ここからGoogleマップの埋め込み -->
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.986341897222!2d135.79925231525843!3d34.66658128043919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108aa2bcfc081%3A0x9dca1e8541f3827a!2z5pel5pys44K544OI44OG44K544Kz5a6u5aSn6LC35LiK5bGx77yR77yW!5e0!3m2!1sja!2sjp!4v1685563608179!5m2!1sja!2sjp"
       width="100%"
@@ -254,10 +248,8 @@
 
   <section>
     <h2>お問い合わせ</h2>
-    <p><p><strong>電話番号：</strong><a href="tel:0665757647">06-6575-7647</a></p>
-<br>
-    ご利用や見学に関するご質問・ご相談など、お気軽にお問い合わせください。</p>
-
+    <p><strong>電話番号：</strong><a href="tel:0665757647">06-6575-7647</a></p>
+    <p>ご利用や見学に関するご質問・ご相談など、お気軽にお問い合わせください。</p>
   </section>
 
   <footer>
