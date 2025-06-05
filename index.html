@@ -31,10 +31,12 @@
       margin: 2rem 0;
     }
 
-    /* 画像のレスポンシブ対応 */
-    img {
-      max-width: 100%;
+    /* ロゴサイズ調整 */
+    #logo {
+      max-width: 200px;
       height: auto;
+      display: block;
+      margin: 0 auto 1rem;
     }
   </style>
 </head>
@@ -46,7 +48,8 @@
     <p>奈良市にある安心・自立への第一歩を支える福祉事業所</p>
   </header>
 
-  <nav aria-label="メインメニュー">
+  <nav>
+    <nav aria-label="メインメニュー"></nav>
     <ul>
       <li><a href="index.html">ホーム</a></li>
       <li><a href="about.html">事業所紹介</a></li>
@@ -56,40 +59,38 @@
     </ul>
   </nav>
 
-  <!-- 基本情報 -->
-  <section id="basic-info">
-    <h2>基本情報</h2>
-    <div class="info-box">
-      <p><strong>所在地：</strong>奈良県奈良市南京終町1丁目168-1</p>
-      <p><strong>営業時間：</strong>9:00～17:00</p>
-      <p><strong>電話番号：</strong>06-6575-7647</p>
-    </div>
-  </section>
+  <section>
+    <!-- 基本情報 -->
+    <section id="basic-info">
+      <h2>基本情報</h2>
+      <div class="info-box">
+        <p><strong>所在地：</strong>奈良県奈良市南京終町1丁目168-1</p>
+        <p><strong>営業時間：</strong>9:00～17:00</p>
+        <p><strong>電話番号：</strong>06-6575-7647</p>
+      </div>
+    </section>
 
-  <!-- 理念・特徴 -->
-  <section id="philosophy">
-    <h2>アリーノの理念・特徴</h2>
-    <div class="info-box">
-      <p>就労継続支援B型事業所 アリーノは、奈良市にある障がいのある方の就労を支援する事業所です。</p>
-      <p><strong>蟻の思いは天まで届く</strong>と言うように</p>
-      <p>小さくても、静かでも、まっすぐな思いは天に届く。<br>
-        その信念を、「アリーノ」という名前に込めました。<br>
-        私たちは、一人ひとりの歩みに寄り添い、共に希望の道をつくっていきます。
-      </p>
-      <p>就労が困難な方でも、ご自身のペースで日中の居場所としてご利用いただけます。<br>
-        介護福祉士・救急救命士のスタッフが常駐しており、安心して過ごせる環境を整えています。
-      </p>
-      <p>☆無料送迎もあります（送迎範囲はご相談ください）</p>
-    </div>
-  </section>
+    <!-- 理念・特徴 -->
+    <section id="philosophy">
+      <h2>アリーノの理念・特徴</h2>
+      <div class="info-box">
+        <p>就労継続支援B型事業所 アリーノは、奈良市にある障がいのある方の就労を支援する事業所です。</p>
+        <p><strong>蟻の思いは天まで届く</strong>と言うように</p>
+        <p>小さくても、静かでも、まっすぐな思いは天に届く。<br>
+          その信念を、「アリーノ」という名前に込めました。<br>
+          私たちは、一人ひとりの歩みに寄り添い、共に希望の道をつくっていきます。</p>
+        <p>就労が困難な方でも、ご自身のペースで日中の居場所としてご利用いただけます。<br>
+          介護福祉士・救急救命士のスタッフが常駐しており、安心して過ごせる環境を整えています。</p>
+        <p>☆無料送迎もあります（送迎範囲はご相談ください）</p>
+      </div>
+    </section>
 
-  <!-- イベント紹介＋写真 -->
-  <section id="event-section">
+    <!-- イベント紹介＋写真 -->
     <h2>イベント紹介</h2>
     <p>定期的にお菓子パーティやビンゴ大会、たこ焼きパーティなどを開催。</p>
     <p>幅広い年代の方が楽しく交流しています。</p>
 
-    <h3>イベントの様子はこちら</h3>
+    <h2>イベントの様子はこちら</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
       <img src="event4.jpg" alt="イベント4" style="width: 30%;" />
       <img src="event5.jpg" alt="イベント5" style="width: 30%;" />
@@ -120,7 +121,6 @@
     </iframe>
   </section>
 
-  <!-- お問い合わせ -->
   <section style="text-align: center; padding: 3rem 1rem; background-color: #f8fbff; border-radius: 8px; margin-top: 2rem;">
     <h2>お問い合わせ</h2>
     <p><strong>電話番号：</strong><a href="tel:0665757647">06-6575-7647</a></p>
