@@ -137,7 +137,7 @@ section > h2 {
       background-color: #005fa3;
     }
     /* --- ここからheaderのロゴとテキストの横並びスタイル --- */
-header {
+ header .header-top {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -145,18 +145,31 @@ header {
   justify-content: flex-start;
 }
 
-#logo {
-  max-width: 150px;
-  height: auto;
-  margin: 0; /* 中央寄せを解除 */
+/* navはheaderの下にブロック表示 */
+header nav {
+  margin-top: 1rem;
 }
 
-.header-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
+
+/* header自体は普通のブロックにする */
+header {
+  padding: 1rem;
+  /* display: flex; は削除 */
 }
+
+/* header-topだけ横並び */
+header .header-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+/* ナビゲーションはheaderの下にブロック表示 */
+header nav {
+  margin-top: 1rem;
+}
+
 
 header > h1, header > p {
   margin: 0;
@@ -169,23 +182,26 @@ header > h1, header > p {
 
 
 <body>
-  <header role="banner">
-
+ <header role="banner">
+  <div class="header-top">
     <img src="logo.jpg" alt="アリーノ ロゴ" id="logo" />
-    <h1>就労継続支援B型 アリーノ</h1>
-    <p>奈良市にある安心・自立への第一歩を支える福祉事業所</p>
+    <div class="header-text">
+      <h1>就労継続支援B型 アリーノ</h1>
+      <p>奈良市にある安心・自立への第一歩を支える福祉事業所</p>
+    </div>
+  </div>
 
-     <nav>
-  <ul>
-  <li><a href="index.html">ホーム</a></li>
-  <li><a href="about.html">事業所紹介</a></li>
-  <li><a href="supporters-voice.html">ご利用をご検討の方へ</a></li>
-  <li><a href="access.html">アクセス</a></li>
-  <li><a href="contact.html">お問い合わせ</a></li>
-</ul>
+  <nav>
+    <ul>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="about.html">事業所紹介</a></li>
+      <li><a href="supporters-voice.html">ご利用をご検討の方へ</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+</header>
 
-</nav>
-  </header>
 
  
 
