@@ -106,6 +106,40 @@ nav ul a:hover {
   color: #002d66;
 }
 
+nav ul {
+  list-style: none; /* 黒点を消す */
+  padding: 0;       /* ulの左余白も消す */
+  margin: 0;
+  background-color: rgba(51, 153, 255, 0.85);
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 0; /* liの余白リセット */
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  background-color: #007acc;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #005fa3;
+  text-decoration: none;
+}
+
 /* 見出しの背景色を少し明るく調整 */
 section > h2 {
   background-color: #4da6ff;
