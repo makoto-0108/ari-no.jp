@@ -106,38 +106,37 @@ nav ul a:hover {
   color: #002d66;
 }
 
+/* ナビゲーションの背景色・枠線などを削除してスッキリ */
 nav ul {
-  list-style: none; /* 黒点を消す */
-  padding: 0;       /* ulの左余白も消す */
-  margin: 0;
-  background-color: rgba(51, 153, 255, 0.85);
-  padding: 0.5rem;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 1rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0; /* liの余白リセット */
+  background: none; /* 背景を消す */
 }
 
 nav ul li a {
   display: inline-block;
-  padding: 0.6em 1.2em;
-  background-color: #007acc;
-  color: white;
+  padding: 0.4em 1em;
+  border: 1px solid #007acc;  /* 枠線だけでボタン感 */
+  color: #007acc;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  font-weight: 500;
+  background: transparent; /* 背景なし */
+  font-size: 1rem;  /* ここに追加！ */
+  transition: all 0.3s ease;
 }
 
+
 nav ul li a:hover {
-  background-color: #005fa3;
-  text-decoration: none;
+  background-color: #e6f4ff; /* ホバー時のうっすら背景 */
+  color: #005fa3;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* 見出しの背景色を少し明るく調整 */
