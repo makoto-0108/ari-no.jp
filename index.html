@@ -2,7 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>アリーノ｜就労継続支援B型事業所</title>
+<title>就労継続支援B型 アリーノ｜奈良市の安心できる福祉支援</title>
+
+  <meta name="description" content="奈良市の就労継続支援B型事業所アリーノの公式サイトです。安心して通える環境と、利用者に寄り添った支援を提供しています。">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Google Fontsのリンクはstyleタグの外に書く -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -39,6 +42,11 @@ h2 {
   line-height: 1.4;
   margin: 1.5rem 0 1rem;
 }
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
 
 
 
@@ -62,21 +70,27 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  background-color: #e6f4ff;
+  background-color: #6DB193; /* ここを変更 */
   margin: 1rem 0;
   padding: 0.5rem;
   border-radius: 8px;
 }
 
-nav ul li a {
+nav ul a {
+  color: white; /* ←ここが背景色 #6DB193 に映える色 */
   text-decoration: none;
-  color: #007acc;
-  font-weight: 500;
+  font-weight: bold;
 }
 
-nav ul li a:hover {
+nav ul a:hover {
   text-decoration: underline;
 }
+
+
+
+
+
+
 
 .contact-button {
   display: inline-block;
@@ -98,29 +112,32 @@ nav ul li a:hover {
 
 
 <body>
-  <header>
+  <header role="banner">
+
     <img src="logo.jpg" alt="アリーノ ロゴ" id="logo" />
     <h1>就労継続支援B型 アリーノ</h1>
     <p>奈良市にある安心・自立への第一歩を支える福祉事業所</p>
+
+     <nav>
+  <ul>
+  <li><a href="index.html">ホーム</a></li>
+  <li><a href="about.html">事業所紹介</a></li>
+  <li><a href="supporters-voice.html">ご利用をご検討の方へ</a></li>
+  <li><a href="access.html">アクセス</a></li>
+  <li><a href="contact.html">お問い合わせ</a></li>
+</ul>
+
+</nav>
   </header>
 
-  <nav>
-  <ul>
-    <li><a href="index.html">ホーム</a></li>
-    <li><a href="about.html">事業所紹介</a></li>
-    <li><a href="supporters-voice.html">ご利用をご検討の方へ</a></li>
-     <li><a href="contact.html">お問い合わせ</a></li>
-      <li><a href="access.html">アクセス</a></li>
-  </ul>
-</nav>
-
-
-    <!-- 基本情報 -->
  
-<!-- <section> -->
-  <section id="basic-info">
+
+
+
   
-  <h2>基本情報</h2>
+  
+  <section id="basic-info">
+    <h2>基本情報</h2>
   <div class="info-box">
     <p><strong>事業所名：</strong>就労継続支援B型 アリーノ</p>
     <p><strong>所在地：</strong>奈良県奈良市南京終町1-168-1</p>
@@ -131,12 +148,9 @@ nav ul li a:hover {
     <p><strong>スタッフ：</strong>介護福祉士・救急救命士が常駐し、安心して過ごせる環境を整えています。</p>
     <p><strong>送迎：</strong>無料送迎サービスあり（範囲はご相談ください）</p>
   </div>
-</section>
-
   </section>
- 
-  ...
-<!-- </section> -->
+
+
 
 
     <!-- 理念・特徴 -->
@@ -144,11 +158,11 @@ nav ul li a:hover {
       <h2>アリーノの理念・特徴</h2>
       <div class="info-box">
         <p>就労継続支援B型事業所 アリーノは、奈良市にある障がいのある方の就労を支援する事業所です。</p>
-        <p><strong>蟻の思いは天まで届く</strong>と言うように</p>
-        <p>小さくても、静かでも、まっすぐな思いは天に届く。と言われるように</p>
-          その信念を、「アリーノ」という名前に込めました。<br>
-          私たちは、一人ひとりの歩みに寄り添い、共に希望の道をつくっていきます。</p>
-        <p>就労が困難な方でも、ご自身のペースで日中の居場所としてご利用いただけます。<br>
+        <p><strong>「蟻の思いは天まで届く」</strong>と言うように</p>
+        <p>たとえ小さくても、静かでも、まっすぐな思いは天に届く。と言われるように</p>
+        <p>そんな信念を、「アリーノ」という名前に込めました。</p>
+        <p>私たちは、一人ひとりの歩みに寄り添い、共に希望の道をつくっていきます。</p>
+        <p>就労が困難な方でも、ご自身のペースで日中の居場所としてご利用いただけます。</p>
        
       </div>
     </section>
@@ -200,7 +214,9 @@ nav ul li a:hover {
 
   <footer>
   <p>&copy; 2025 就労継続支援B型 アリーノ</p>
+  <p><a href="privacy.html">プライバシーポリシー</a> | <a href="contact.html">お問い合わせ</a></p>
 </footer>
+
 
 </body>
 </html>
