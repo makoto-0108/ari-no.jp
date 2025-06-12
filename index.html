@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
+
 <title>就労継続支援B型 アリーノ｜奈良市の安心できる福祉支援</title>
 
   <meta name="description" content="奈良市の就労継続支援B型事業所アリーノの公式サイトです。安心して通える環境と、利用者に寄り添った支援を提供しています。">
@@ -85,60 +86,15 @@ section > h2 {
 
 /* ここからナビゲーションとボタンのスタイル */
 nav ul {
-  background-color: rgba(51, 153, 255, 0.15);
-}
-
-  padding: 0.5rem;
-  border-radius: 8px;
-  margin-bottom: 1rem; /* 下に余白追加 */
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap; /* 狭い画面で折り返し */
-}
-
-/* ナビリンク文字色は濃いめの青で読みやすく */
-nav ul a {
-  color: #004a99;
-  font-weight: bold;
-}
-
-nav ul a:hover {
-  text-decoration: underline;
-  color: #002d66;
-}
-
-/* ナビゲーションの背景色・枠線などを削除してスッキリ */
-nav ul {
   list-style: none;
-  padding: 0;
+  padding: 0.5rem;
   margin: 0 auto 1rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  background: none; /* 背景を消す */
-}
-
-nav ul li a {
-  display: inline-block;
-  padding: 0.4em 1em;
-  border: 1px solid #007acc;  /* 枠線だけでボタン感 */
-  color: #007acc;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  background: transparent; /* 背景なし */
-  font-size: 1rem;  /* ここに追加！ */
-  transition: all 0.3s ease;
-}
-
-
-nav ul li a:hover {
-  background-color: #e6f4ff; /* ホバー時のうっすら背景 */
-  color: #005fa3;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: rgba(51, 153, 255, 0.15);
+  border-radius: 8px;
 }
 
 /* 見出しの背景色を少し明るく調整 */
@@ -180,6 +136,34 @@ section > h2 {
     .home-button:hover {
       background-color: #005fa3;
     }
+    /* --- ここからheaderのロゴとテキストの横並びスタイル --- */
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: flex-start;
+}
+
+#logo {
+  max-width: 150px;
+  height: auto;
+  margin: 0; /* 中央寄せを解除 */
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+header > h1, header > p {
+  margin: 0;
+}
+
+/* --- ここまで --- */
+
   </style>
 </head>
 
@@ -214,6 +198,7 @@ section > h2 {
   <div class="info-box">
     <p><strong>事業所名：</strong>就労継続支援B型 アリーノ</p>
     <p><strong>所在地：</strong>奈良県奈良市南京終町1-168-1</p>
+    <p><strong>電話番号：</strong><a href="tel:0665757647">0665757647</a></p>
     <p><strong>開所時間：</strong>9:00〜18:00（月〜金）</p>
     <p><strong>定休日：</strong>土日祝日</p>
     <p><strong>利用対象：</strong>障がいのある方で、就労継続支援B型のサービスをご希望の方</p>
@@ -259,7 +244,7 @@ section > h2 {
 
   <section style="text-align: center; padding: 3rem 1rem; background-color: #f8fbff; border-radius: 8px; margin-top: 2rem;">
     <h2>お問い合わせ</h2>
-    <p><strong>電話番号：</strong><a href="tel:0665757647">06-6575-7647</a></p>
+    <p><strong>電話番号：</strong><a href="tel:0665757647">0665757647</a></p>
     <p>営業時間：9時〜18時</p>
     <p>ご利用や見学に関するご質問・ご相談など、お気軽にお問い合わせください。</p>
     <a class="contact-button" href="contact.html">📩 お問い合わせフォームへ</a>
