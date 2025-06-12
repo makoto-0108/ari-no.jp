@@ -61,33 +61,58 @@
     }
 
     /* ここからナビゲーションとボタンのスタイル */
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      background-color: #007acc; /* 濃い青に */
-      margin: 1rem 0;
-      padding: 0.5rem;
-      border-radius: 8px;
-    }
+    /* ナビ背景に透明度付き明るい青 */
 
-    nav ul a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
 
-    nav ul a:hover {
-      text-decoration: underline;
-    }
+/* ナビリンク文字色は濃いめの青で読みやすく */
+nav ul a {
+  color: #004a99; /* 濃い青 */
+  font-weight: bold;
+}
 
-    section > h2 {
-      background-color: #3399ff; /* 明るめ青に */
-      padding: 0.5em;
-      border-radius: 6px;
-    }
+nav ul a:hover {
+  text-decoration: underline;
+  color: #002d66; /* さらに濃い青 */
+}
+
+/* 見出しの背景色を少し明るく調整 */
+section > h2 {
+  background-color: #4da6ff; /* #3399ffより少し明るめ */
+  padding: 0.5em;
+  border-radius: 6px;
+  color: white;
+}
+
+/* ここからナビゲーションとボタンのスタイル */
+nav ul {
+  background-color: rgba(51, 153, 255, 0.85);
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem; /* 下に余白追加 */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* 狭い画面で折り返し */
+}
+
+/* ナビリンク文字色は濃いめの青で読みやすく */
+nav ul a {
+  color: #004a99;
+  font-weight: bold;
+}
+
+nav ul a:hover {
+  text-decoration: underline;
+  color: #002d66;
+}
+
+/* 見出しの背景色を少し明るく調整 */
+section > h2 {
+  background-color: #4da6ff;
+  padding: 0.5em;
+  border-radius: 6px;
+  color: white;
+}
 
     .contact-button {
       display: inline-block;
