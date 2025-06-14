@@ -13,21 +13,19 @@
 
   <style>
     /* フォント設定 */
-/* フォント設定 */
+
+/* === 共通設定 === */
 body {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333;
 }
 
-header {
-  background-color: #f7f3ec;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* === ヘッダー画像 === */
 .header-image img {
   width: 100%;
   max-width: 960px;
@@ -41,49 +39,41 @@ header {
   margin: 1rem auto;
 }
 
-.header-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0.5rem 1rem;
-  flex-wrap: wrap;
-}
-
-/* ナビゲーションバー */
+/* === ナビゲーションバー === */
 .navbar {
-  width: 100%;
-  max-width: 960px;
-  padding: 0.5rem 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  max-width: 960px;
   position: sticky;
   top: 0;
-  z-index: 999;
-  background-color: transparent;
+  z-index: 1000;
+  background: transparent;
+  backdrop-filter: blur(5px);
 }
 
-/* リンクリストの見た目 */
 .nav-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem;
+  list-style: none;
   padding: 0;
   margin: 0;
-  list-style: none;
+  gap: 0.5rem;
 }
 
 .nav-links li a {
   background-color: #e0f0ff;
   border: 1px solid #007acc;
   color: #007acc;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
   text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .nav-links li a:hover {
@@ -91,101 +81,107 @@ header {
   color: #fff;
 }
 
-/* モバイル対応 */
-@media (max-width: 500px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links li a {
-    width: 80%;
-    max-width: 300px;
-    text-align: center;
-  }
-
-  .header-top {
-    flex-direction: column;
-  }
-}
-@media (max-width: 500px) {
-  .navbar {
-    background-color: #ffffff; /* または #f7f3ec など薄い色 */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 見た目向上用 */
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links li a {
-    width: 80%;
-    max-width: 300px;
-    text-align: center;
-  }
+/* === セクション共通 === */
+section {
+  max-width: 960px;
+  margin: 3rem auto;
+  padding: 0 1rem;
 }
 
+section h2 {
+  background-color: #67C4FF;
+  color: white;
+  padding: 1rem 0;
+  margin: 0 0 1.5rem;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 1.5rem;
+}
 
-/* navはheaderの下にブロック表示 */
-header nav {
+/* === 情報ボックス === */
+.info-box p {
+  margin: 0.5rem 0;
+}
+
+/* === イベント画像 === */
+#event-section div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#event-section img {
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* === お問い合わせボタン === */
+.contact-button {
+  display: inline-block;
   margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #007acc;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
 }
 
-
-.header-image img {
-  width: 100%; /* ヘッダーの横幅いっぱいに */
-  max-height: 300px; /* 高さを制限、必要に応じて調整 */
-  object-fit: cover; /* 画像のトリミング調整 */
-  border-radius: 8px; /* 角丸（好みで） */
-  margin: 1rem 0; /* 上下の余白 */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.contact-button:hover {
+  background-color: #005f99;
 }
 
-.header-top {
-  padding: 0.5rem 0; /* 今は1remあるので半分に */
+/* === フッター === */
+footer {
+  background-color: #f3f3f3;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
 }
 
+footer a {
+  color: #007acc;
+  text-decoration: none;
+}
 
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === モバイル対応 === */
 @media (max-width: 500px) {
   .nav-links {
     flex-direction: column;
     align-items: center;
   }
-
-  .nav-links li a {
-    width: 80%;
-    max-width: 300px;
-    text-align: center;
-  }
-}
-
-
 
   .nav-links li a {
     width: 100%;
+    max-width: 300px;
     text-align: center;
   }
 
+  .header-image img {
+    max-height: 200px;
+  }
 
+  section h2 {
+    font-size: 1.3rem;
+  }
 
+  .contact-button {
+    width: 80%;
+    max-width: 300px;
+  }
 
-
-header > h1, header > p {
-  margin: 0;
+  #event-section img {
+    width: 90%;
+  }
 }
-section > h2 {
-  background-color: #67C4FF;
-  color: white;
-  padding: 0.8rem 0;
-  margin: 0;
-  text-align: center; /* タイトル中央寄せ */
-}
-
 
 /* --- ここまで --- */
 
