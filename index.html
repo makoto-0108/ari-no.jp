@@ -192,6 +192,16 @@ header {
   /* display: flex; は削除 */
 }
 
+.header-image img {
+  width: 100%; /* ヘッダーの横幅いっぱいに */
+  max-height: 300px; /* 高さを制限、必要に応じて調整 */
+  object-fit: cover; /* 画像のトリミング調整 */
+  border-radius: 8px; /* 角丸（好みで） */
+  margin: 1rem 0; /* 上下の余白 */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
@@ -210,10 +220,16 @@ header > h1, header > p {
 <body>
  <header role="banner">
   <div class="header-top">
+    <img src="logo.jpg" alt="アリーノ ロゴ" id="logo" />
     <div class="header-text">
       <h1>就労継続支援B型 アリーノ</h1>
       <p>奈良市にある安心・自立への第一歩を支える福祉事業所</p>
     </div>
+  </div>
+
+  <!-- ここにヘッダー画像を追加 -->
+  <div class="header-image">
+    <img src="header.png" alt="ヘッダー画像" />
   </div>
 
   <nav class="navbar">
@@ -225,9 +241,8 @@ header > h1, header > p {
       <li><a href="contact.html">お問い合わせ</a></li>
     </ul>
   </nav>
- 
-
 </header>
+
 
 
  
