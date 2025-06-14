@@ -28,16 +28,16 @@ body {
 /* === ヘッダー画像 === */
 .header-image img {
   width: 100%;
-  max-width: 960px;
-  max-height: 300px;
+  height: auto;
+  max-height: 200px;
   object-fit: cover;
   border-radius: 8px;
   background-color: #ffffff;
-  padding: 10px 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: block;
   margin: 1rem auto;
 }
+
 
 /* === ナビゲーションバー === */
 .navbar {
@@ -155,9 +155,26 @@ footer a:hover {
 /* === モバイル対応 === */
 @media (max-width: 500px) {
   .nav-links {
-    flex-direction: column;
-    align-items: center;
+    ...
   }
+
+  .header-image {
+    padding-top: 3rem;
+  }
+
+  .header-image img {
+    max-height: 180px;
+  }
+
+  ...
+}
+
+
+  .header-image img {
+    max-height: 180px;
+  }
+}
+
 
   .nav-links li a {
     width: 100%;
