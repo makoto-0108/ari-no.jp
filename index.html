@@ -14,28 +14,53 @@
 
   <style>
     /* フォント設定 */
+/* フォント設定 */
 body {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
 }
 
-/* ヘッダー構造の基本 */
+/* ヘッダー全体 */
 header {
-  padding: 1rem;
+  background-color: #f8f8f8;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header-top {
+/* ヘッダー内のトップ部分（ロゴ画像＋テキスト） */
+header .header-top {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  justify-content: center; /* 横並び中央寄せ */
   text-align: center;
 }
+
+/* ヘッダーのロゴ画像 */
 .header-image img {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem auto;
+  display: block;
 }
 
+/* ヘッダー内のテキスト */
+.header-text h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0;
+}
+
+.header-text p {
+  margin: 0;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #333;
+}
 
 /* ナビゲーションバー */
 .navbar {
@@ -44,154 +69,54 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
-  padding: 1rem;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
   max-width: 960px;
-}
-
-
-.nav-links {
-  list-style: none;
-  padding: 0.5rem;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
 }
 
+/* ナビリンクリスト */
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ナビリンク */
 .nav-links li a {
+  font-size: 0.95rem;
+  padding: 0.3rem 0.8rem;
   text-decoration: none;
-  color: #004a99;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  border: 2px solid #4CAF50;
-  border-radius: 9999px;
-  background-color: white;
-  transition: background-color 0.3s, color 0.3s;
+  color: #007acc;
+  border-radius: 6px;
+  display: block;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
 .nav-links li a:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-.nav-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  background-color: #005fa3;
+  color: #fff;
 }
 
-section {
-  scroll-margin-top: 4rem; /* sticky navbar の高さ分ずらす */
-}
-section {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
+/* モバイル対応（500px以下） */
+@media (max-width: 500px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
 
-/* モバイル対応 */
+  .nav-links li a {
+    width: 80%;
+    max-width: 300px;
+  }
 
-   
-
-    #basic-info .info-box,
-    #philosophy .info-box,
-    #access-info .info-box {
-      border-left: 5px solid #007acc;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 4px;
-    }
-    h1 {
-      font-weight: 500;
-      font-size: 1.8rem;
-      line-height: 1.4;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      font-weight: 500;
-      font-size: 1.4rem;
-      line-height: 1.4;
-      margin: 1.5rem 0 1rem;
-    }
-    h3 {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      font-weight: 500;
-    }
-
-    #event-section {
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin: 2rem 0;
-    }
-
-
-    /* ここからナビゲーションとボタンのスタイル */
-    
-
-/* 見出しの背景色を少し明るく調整 */
-section > h2 {
-  background-color: #4da6ff; /* #3399ffより少し明るめ */
-  padding: 0.5em;
-  border-radius: 6px;
-  color: white;
-}
-.event img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-
-
-
-
-    .contact-button {
-      display: inline-block;
-      background-color: #007acc;
-      color: white;
-      padding: 0.7em 1.2em;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background-color 0.3s ease;
-    }
-
-    .contact-button:hover {
-      background-color: #005fa3; /* さらに濃い青 */
-    }
-
-    /* ホームに戻るボタン用 */
-    .home-button {
-      display: inline-block;
-      background-color: #007acc;
-      color: white;
-      padding: 0.5em 1em;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 500;
-      margin: 1rem 0;
-      transition: background-color 0.3s ease;
-    }
-
-    .home-button:hover {
-      background-color: #005fa3;
-    }
-    /* --- ここからheaderのロゴとテキストの横並びスタイル --- */
-
-
-
- header .header-top {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  justify-content: center; /* ← ここを変更！ */
+  header .header-top {
+    flex-direction: column;
+  }
 }
 
 
@@ -201,12 +126,6 @@ header nav {
   margin-top: 1rem;
 }
 
-
-/* header自体は普通のブロックにする */
-header {
-  padding: 1rem;
-  /* display: flex; は削除 */
-}
 
 .header-image img {
   width: 100%; /* ヘッダーの横幅いっぱいに */
@@ -218,6 +137,11 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
+
+.header-top {
+  padding: 0.5rem 0; /* 今は1remあるので半分に */
+}
+
 
 @media (max-width: 500px) {
   .nav-links {
