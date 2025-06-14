@@ -53,9 +53,12 @@ header {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  background-color: rgba(51, 153, 255, 0.15);
+  background-color: transparent; /* または白の半透明 */
   border-radius: 8px;
 }
+
+/* nav ul から背景色指定は削除するか、下記のように透明に */
+
 
 .nav-links li a {
   text-decoration: none;
@@ -75,11 +78,7 @@ header {
 
 /* モバイル対応 */
 
-    section > h2 {
-      background-color: #6ec3ff;
-      padding: 0.5em;
-      border-radius: 6px;
-    }
+   
 
     #basic-info .info-box,
     #philosophy .info-box,
@@ -121,7 +120,7 @@ header {
     }
 
     /* ここからナビゲーションとボタンのスタイル */
-    /* ナビ背景に
+    
 
 /* 見出しの背景色を少し明るく調整 */
 section > h2 {
@@ -255,7 +254,7 @@ header > h1, header > p {
     <p><strong>利用対象：</strong>障がいのある方で、就労継続支援B型のサービスをご希望の方</p>
     <p><strong>サービス内容：</strong>軽作業を中心に、利用者のペースに合わせた支援を提供します。</p>
     <p><strong>スタッフ：</strong>介護福祉士・救急救命士が常駐し、安心して過ごせる環境を整えています。</p>
-    <p><strong>送迎：</strong>無料送迎サービスあり（範囲はご相談ください）</p>
+    <p><strong>送迎：</strong>無料送迎サービスあり（ご希望のエリアはお気軽にご相談ください）</p>
   </div>
   </section>
 
@@ -275,7 +274,7 @@ header > h1, header > p {
        
       </div>
     </section>
-
+<main>
    <section id="event-section">
   <h2>イベント紹介</h2>
   <p>定期的にお菓子パーティやビンゴ大会、たこ焼きパーティなどを開催。</p>
