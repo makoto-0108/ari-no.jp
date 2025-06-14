@@ -31,11 +31,6 @@ header {
   text-align: center;
 }
 
-#logo {
-  max-width: 200px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
 
 /* ナビゲーションバー */
 .navbar {
@@ -220,7 +215,6 @@ header > h1, header > p {
 <body>
  <header role="banner">
   <div class="header-top">
-    <img src="logo.jpg" alt="アリーノ ロゴ" id="logo" />
     <div class="header-text">
       <h1>就労継続支援B型 アリーノ</h1>
       <p>奈良市にある安心・自立への第一歩を支える福祉事業所</p>
@@ -229,7 +223,15 @@ header > h1, header > p {
 
   <!-- ここにヘッダー画像を追加 -->
   <div class="header-image">
-    <img src="header.png" alt="ヘッダー画像" />
+.header-image img {
+  width: 100%;         /* 横幅はコンテナいっぱいに */
+  max-width: 800px;    /* 画像の最大幅を800pxに制限 */
+  max-height: 250px;   /* 高さは最大250pxまでに */
+  object-fit: cover;   /* トリミングして見栄え良く */
+  border-radius: 8px;
+  margin: 1rem auto;   /* 上下1remの余白＋左右中央寄せ */
+  display: block;
+}
   </div>
 
   <nav class="navbar">
