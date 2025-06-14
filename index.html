@@ -6,7 +6,7 @@
 <title>就労継続支援B型 アリーノ｜奈良市の安心できる福祉支援</title>
 
  <meta property="og:title" content="就労継続支援B型 アリーノ｜奈良市の安心できる福祉支援">
-<meta property="og:description" content="奈良市の就労継続支援B型事業所アリーノの公式サイトです。安心して通える環境と、利用者に寄り添った支援を提供しています。">
+<meta property="og:description" content="奈良市の就労継続支援B型事業所アリーノ。安心して通える環境で、利用者に寄り添った支援を提供します。">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Google Fontsのリンクはstyleタグの外に書く -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -30,30 +30,37 @@ header {
   align-items: center;
   text-align: center;
 }
+.header-image img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
 
 
 /* ナビゲーションバー */
 .navbar {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  position: sticky;
+  top: 0;
+  z-index: 999;
   padding: 1rem;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 960px;
 }
+
 
 .nav-links {
   list-style: none;
   padding: 0.5rem;
-  margin: 0 auto 1rem;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
-  background-color: transparent; /* または白の半透明 */
-  border-radius: 8px;
 }
-
-/* nav ul から背景色指定は削除するか、下記のように透明に */
-
 
 .nav-links li a {
   text-decoration: none;
@@ -62,13 +69,27 @@ header {
   padding: 0.5rem 1rem;
   border: 2px solid #4CAF50;
   border-radius: 9999px;
-  transition: background-color 0.3s, color 0.3s;
   background-color: white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-links li a:hover {
   background-color: #4CAF50;
   color: white;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+section {
+  scroll-margin-top: 4rem; /* sticky navbar の高さ分ずらす */
+}
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* モバイル対応 */
@@ -118,19 +139,16 @@ section > h2 {
   border-radius: 6px;
   color: white;
 }
-
-/* ここからナビゲーションとボタンのスタイル */
-nav ul {
-  list-style: none;
-  padding: 0.5rem;
-  margin: 0 auto 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  background-color: rgba(51, 153, 255, 0.15);
-  border-radius: 8px;
+.event img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
+
+
+
 
 
     .contact-button {
@@ -165,6 +183,9 @@ nav ul {
       background-color: #005fa3;
     }
     /* --- ここからheaderのロゴとテキストの横並びスタイル --- */
+
+
+
  header .header-top {
   display: flex;
   align-items: center;
@@ -198,6 +219,26 @@ header {
   margin-right: auto;
 }
 
+@media (max-width: 500px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li a {
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+
+
+  .nav-links li a {
+    width: 100%;
+    text-align: center;
+  }
+
 
 
 
@@ -214,6 +255,9 @@ header > h1, header > p {
 
 <body>
  <header role="banner">
+  <div class="header-image">
+  <img src="header.png" alt="アリーノの横長ロゴ" />
+</div>
   <div class="header-top">
     <div class="header-text">
       <h1>就労継続支援B型 アリーノ</h1>
@@ -221,18 +265,7 @@ header > h1, header > p {
     </div>
   </div>
 
-  <!-- ここにヘッダー画像を追加 -->
-  <div class="header-image">
-.header-image img {
-  width: 100%;         /* 横幅はコンテナいっぱいに */
-  max-width: 800px;    /* 画像の最大幅を800pxに制限 */
-  max-height: 250px;   /* 高さは最大250pxまでに */
-  object-fit: cover;   /* トリミングして見栄え良く */
-  border-radius: 8px;
-  margin: 1rem auto;   /* 上下1remの余白＋左右中央寄せ */
-  display: block;
-}
-  </div>
+
 
   <nav class="navbar">
     <ul class="nav-links">
@@ -247,6 +280,7 @@ header > h1, header > p {
 
 
 
+
  
 
 
@@ -258,7 +292,7 @@ header > h1, header > p {
   <div class="info-box">
     <p><strong>事業所名：</strong>就労継続支援B型 アリーノ</p>
     <p><strong>所在地：</strong>奈良県奈良市南京終町1-168-1</p>
-    <p><strong>電話番号：</strong><a href="tel:06-6575-7647">06-6575-7647</a></p>
+<p><strong>電話番号：</strong><a href="tel:0742778194">0742778194</a></p>
     <p><strong>開所時間：</strong>9:00〜18:00（月〜金）</p>
     <p><strong>定休日：</strong>土日祝日</p>
     <p><strong>利用対象：</strong>障がいのある方で、就労継続支援B型のサービスをご希望の方</p>
@@ -284,7 +318,7 @@ header > h1, header > p {
        
       </div>
     </section>
-<main>
+
    <section id="event-section">
   <h2>イベント紹介</h2>
   <p>定期的にお菓子パーティやビンゴ大会、たこ焼きパーティなどを開催。</p>
@@ -300,11 +334,11 @@ header > h1, header > p {
     <img src="event3.jpg" alt="イベント3" style="width: 30%;" loading="lazy" />
   </div>
 </section>
-</main>
+
 
   <section style="text-align: center; padding: 3rem 1rem; background-color: #f8fbff; border-radius: 8px; margin-top: 2rem;">
     <h2>お問い合わせ</h2>
-<p><strong>電話番号：</strong><a href="tel:06-6575-7647">06-6575-7647</a></p>
+<p><strong>電話番号：</strong><a href="tel:0742778194">0742778194</a></p>
     <p>営業時間：9時〜18時</p>
     <p>ご利用や見学に関するご質問・ご相談など、お気軽にお問い合わせください。</p>
     <a class="contact-button" href="contact.html">📩 お問い合わせフォームへ</a>
