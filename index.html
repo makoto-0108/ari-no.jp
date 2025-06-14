@@ -191,23 +191,13 @@ footer a:hover {
 }
 
 /* === モバイル対応 === */
+/* スマホ対応（修正後） */
 @media (max-width: 500px) {
   .nav-links li a {
     width: 100%;
     max-width: 300px;
     text-align: center;
   }
-@media (max-width: 500px) {
-  .nav-links {
-    flex-direction: column; /* 横並びから縦並びに */
-    gap: 0.5rem;
-  }
-  .nav-links li a {
-    width: 100%;
-    max-width: none; /* 幅制限外す */
-    box-sizing: border-box;
-  }
-}
 
   .header-image {
     padding-top: 3.5rem;
@@ -234,6 +224,11 @@ footer a:hover {
 
   .nav-links {
     margin-bottom: 1rem;
+  }
+
+  .site-title {
+    font-size: 1.8rem;
+    margin-top: 4rem; /* ←これで上に余白をつくる */
   }
 
   #event-section img {
