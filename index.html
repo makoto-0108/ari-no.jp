@@ -30,7 +30,7 @@ body {
 .header-image img {
   width: 100%;
   height: auto;
-  max-height: 200px;
+  max-height: 160px;
   object-fit: cover;
   border-radius: 8px;
   background-color: #ffffff;
@@ -38,6 +38,35 @@ body {
   display: block;
   margin: 1rem auto;
 }
+
+
+@media (max-width: 500px) {
+  .header-image img {
+    max-height: 120px;
+  }
+}
+@media (max-width: 500px) {
+  .contact-button {
+    width: 80%;
+    max-width: 300px;
+    margin: 1rem auto; /* 上下左右に1remずつの余白を中央寄せで */
+    display: block;    /* 横幅指定を活かすためにブロック化 */
+  }
+}
+@media (max-width: 500px) {
+  section {
+    padding: 1rem 1.5rem;
+  }
+}
+
+}
+@media (max-width: 500px) {
+  .nav-links {
+    margin-bottom: 1rem;
+  }
+}
+
+
 
 
 /* === ナビゲーションバー === */
