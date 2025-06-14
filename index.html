@@ -30,16 +30,17 @@ body {
 /* === ヘッダー画像 === */
 .header-image img {
   width: 100%;
-  max-width: 960px; /* ← 追加：最大幅を制限（例として960px） */
+  max-width: 960px;     /* 最大横幅を制限 */
   height: auto;
-  max-height: 160px;
-  object-fit: cover;
+  max-height: 100px;    /* ← ここを調整（前は160px） */
+  object-fit: contain;  /* cover→containに変更でトリミング回避 */
   border-radius: 8px;
   background-color: #ffffff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   display: block;
   margin: 1rem auto;
 }
+
 
 
 
