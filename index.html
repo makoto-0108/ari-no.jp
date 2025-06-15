@@ -135,6 +135,24 @@ footer {
   #event-section img {
     width: 90%;
   }
+.nav-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    flex-direction: column; /* 縦並びにしてはみ出し防止 */
+    align-items: center;
+  }
+  header nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
 
 
 /* --- ここまで --- */
