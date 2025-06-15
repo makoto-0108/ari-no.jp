@@ -21,93 +21,130 @@
 /* 全体のリセットとフォント設定 */
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-family: "Noto Sans JP", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
 }
 
 /* ヘッダー全体 */
+/* ヘッダー全体 */
 header {
-  background-color: #6ab8d8;
-  color: white;
-  padding: 20px;
-  position: relative; /* ナビを絶対位置に配置するために必要 */
+  background-color: transparent; /* 背景帯を削除 */
+  color: #333;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /* サイトタイトル */
 .site-title {
+  font-size: 1.8em;
   margin: 0;
-  font-size: 2.5em;
-  padding: 0.5em;
-  text-align: center;
-  padding-right: 150px; /* ナビとの被りを避ける */
+  font-weight: 700;
+  color: #333;
 }
 
 /* ナビゲーションリンク */
-header nav {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-header nav a {
-  color: white;
+.nav-links a {
+  display: inline-block;
   text-decoration: none;
-  margin-left: 15px;
-  font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  color: #333;
+  background-color: #e0f4ff; /* ボタン風 */
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-header nav a:hover {
+.nav-links a:hover {
+  background-color: #b2e0ff;
+  transform: translateY(-2px);
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.nav-links a:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-/* セクション共通スタイル */
-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  background-color: white;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* フッター */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #6ab8d8;
-  color: white;
-}
-
-/* レスポンシブ対応 */
-.site-title {
-  margin: 0;
-  font-size: 2.5em;
-  padding: 0.5em;
-  text-align: center;
-  padding-right: 150px;
-}
-
 @media screen and (max-width: 768px) {
-  .site-title {
-    padding-right: 0; /* モバイルは余白なしに */
-  }
-  header nav {
-    position: static; /* 絶対配置解除 */
-    margin-top: 10px;
-    text-align: center;
-  }
-  .nav-links {
-    justify-content: center;
+  header {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
   }
 }
+
+
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+  }
+}
+
+
+
 
   .header-image img {
     max-height: 180px;
@@ -146,6 +183,14 @@ footer {
   list-style: none;
   display: flex;
   gap: 15px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 768px) {
