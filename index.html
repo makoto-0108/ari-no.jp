@@ -28,16 +28,18 @@ body {
 }
 
 /* ヘッダー全体 */
-/* ヘッダー全体 */
+
 header {
-  background-color: transparent; /* 背景帯を削除 */
+  background-color: #eaf6ff; /* 淡い水色 */
   color: #333;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem; /* ここはお好みで調整 */
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
 
 /* サイトタイトル */
 .site-title {
@@ -69,10 +71,8 @@ header {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.nav-links a:hover {
-  background-color: #b2e0ff;
-  transform: translateY(-2px);
-}
+
+
 
 /* モバイル対応 */
 @media screen and (max-width: 768px) {
@@ -94,9 +94,7 @@ header {
   }
 }
 
-.nav-links a:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
+
 
 @media screen and (max-width: 768px) {
   header {
@@ -111,12 +109,6 @@ header {
     margin-top: 1rem;
   }
 
-  .nav-links a {
-    width: 100%;
-    text-align: left;
-    margin: 5px 0;
-  }
-}
 
 
 
@@ -135,13 +127,6 @@ header {
     flex-direction: column;
     width: 100%;
   }
-
-  .nav-links a {
-    width: 100%;
-    text-align: left;
-    margin: 5px 0;
-  }
-}
 
 
 
