@@ -18,200 +18,88 @@
     /* フォント設定 */
 
 /* === 共通設定 === */
+/* 全体のリセットとフォント設定 */
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  background-color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
   color: #333;
 }
 
-
+/* ヘッダー全体 */
 header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-
-
-@media (max-width: 500px) {
-  .navbar a {
-    display: block;             /* ← 横並び→縦並びへ */
-    width: 100%;                /* ← 画面幅にフィット */
-    margin: 0.5rem 0;           /* ← 上下に余白追加！ */
-    padding: 0.8rem;            /* ← タップしやすく */
-    text-align: center;         /* ← 中央寄せ */
-  }
-}
-
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .nav-links li a {
-    width: 100%;
-    max-width: none;
-    padding: 0.75rem 1rem;
-    text-align: center;
-    border-radius: 10px;
-  }
-}
-
-
-
-
-/* === ナビゲーションバー === */
-.navbar {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1rem auto;
-  padding: 0 1rem;
-  max-width: 960px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: transparent;
-  /* ↓この行を削除、もしくはコメントアウトしてみて */
-  /* backdrop-filter: blur(5px); */
-}
-.navbar {
-  background-color: #ffffff; /* 白ではなくサイト全体に馴染む色でもOK */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* 下にうっすら影をつけると自然 */
-}
-
-
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 0.5rem;
-}
-
-.nav-links li a {
-  background-color: #e0f0ff;
-  border: 1px solid #007acc;
-  color: #007acc;
-  padding: 0.5rem 1.2rem;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.nav-links li a:hover {
-  background-color: #007acc;
-  color: #fff;
-}
-
-.site-title {
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 700;
-  font-size: 2.5rem;  /* お好みで調整 */
-  color: #007acc;     /* メインカラーに合わせる */
-  text-align: center;
-  margin: 1.5rem 0 1rem 0;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);  /* 軽い影で浮き立たせる */
-}
-
-
-/* === セクション共通 === */
-section {
-  max-width: 960px;
-  margin: 3rem auto;
-  padding: 0 1rem;
-}
-
-section h2 {
-  background-color: #67C4FF;
+  background-color: #6ab8d8;
   color: white;
-  padding: 1rem 0;
-  margin: 0 0 1.5rem;
+  padding: 20px;
+  position: relative; /* ナビを絶対位置に配置するために必要 */
+}
+
+/* サイトタイトル */
+.site-title {
+  margin: 0;
+  font-size: 2.5em;
+  padding: 0.5em;
   text-align: center;
-  border-radius: 6px;
-  font-size: 1.5rem;
+  padding-right: 150px; /* ナビとの被りを避ける */
 }
 
-/* === 情報ボックス === */
-.info-box p {
-  margin: 0.5rem 0;
+/* ナビゲーションリンク */
+header nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-/* === イベント画像 === */
-#event-section div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
-#event-section img {
-  width: 30%;
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
 }
 
-/* === お問い合わせボタン === */
-.contact-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #007acc;
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s;
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
-.contact-button:hover {
-  background-color: #005f99;
+/* セクション共通スタイル */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* === フッター === */
+/* フッター */
 footer {
-  background-color: #f3f3f3;
-  padding: 2rem 1rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: #555;
+  padding: 20px;
+  background-color: #6ab8d8;
+  color: white;
 }
 
-footer a {
-  color: #007acc;
-  text-decoration: none;
-}
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  header nav {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+  }
 
-footer a:hover {
-  text-decoration: underline;
-}
+  header nav a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
 
-/* === モバイル対応 === */
-/* スマホ対応（修正後） */
-@media (max-width: 500px) {
   .site-title {
-    margin-top: 6rem;
-  }
-
-  .header-image {
-    margin-top: 6rem;
-  }
-
-  .navbar {
-    padding: 1rem;
-  }
-
-  .contact-button {
-    min-height: 44px;
+    padding-right: 0;
   }
 }
 
@@ -247,7 +135,7 @@ footer a:hover {
   #event-section img {
     width: 90%;
   }
-}
+
 
 /* --- ここまで --- */
 
