@@ -12,6 +12,7 @@
   <!-- Google Fontsのリンクはstyleタグの外に書く -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+<title>アリーノ｜奈良市の就労継続支援B型</title>
 
   <style>
     /* フォント設定 */
@@ -36,11 +37,15 @@ header {
 
 
 @media (max-width: 500px) {
-  .navbar {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 0.5rem 1rem;
+  .navbar a {
+    display: block;             /* ← 横並び→縦並びへ */
+    width: 100%;                /* ← 画面幅にフィット */
+    margin: 0.5rem 0;           /* ← 上下に余白追加！ */
+    padding: 0.8rem;            /* ← タップしやすく */
+    text-align: center;         /* ← 中央寄せ */
   }
+}
+
 
   .nav-links {
     flex-direction: column;
@@ -193,15 +198,23 @@ footer a:hover {
 /* === モバイル対応 === */
 /* スマホ対応（修正後） */
 @media (max-width: 500px) {
-  .nav-links li a {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
+  .site-title {
+    margin-top: 6rem;
   }
 
   .header-image {
-    padding-top: 3.5rem;
+    margin-top: 6rem;
   }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .contact-button {
+    min-height: 44px;
+  }
+}
+
 
   .header-image img {
     max-height: 180px;
@@ -222,13 +235,13 @@ footer a:hover {
     display: block;
   }
 
+  
+
   .nav-links {
     margin-bottom: 1rem;
   }
 
-.site-title {
-  margin-top: 4rem; /* ←ここを大きめにする */
-}
+
 
 
   #event-section img {
