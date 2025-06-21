@@ -36,7 +36,7 @@ nav a:hover {
 }
 
 header {
-  padding: 1rem 3rem;  /* 左右の余白を3remに統一 */
+  padding: 0 32px;  
   max-width: 1200px;
  margin: 0 auto;
   display: flex;
@@ -79,6 +79,7 @@ p {
   color: #444;
 }
 .info-box {
+  text-align: left;
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
@@ -112,12 +113,12 @@ p {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem; /* 横の余白を2remに */
+  padding: 0 32px;
 }
 
 section {
   padding: 80px 32px;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: #f8fbff;
 }
@@ -245,6 +246,14 @@ footer a:hover {
 .contact-button:hover {
   background-color: #005fa3;
 }
+.content-section {
+  padding: 80px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8fbff;
+  text-align: center; /* ← 追加！ */
+}
+
 
 
 </style>
@@ -266,7 +275,7 @@ footer a:hover {
 
   <main>
 
-    <section id="basic-info">
+<section id="basic-info" class="content-section">
       <h2>基本情報</h2>
       <div class="info-box">
         <p><strong>事業所名：</strong>就労継続支援B型 アリーノ</p>
@@ -281,8 +290,10 @@ footer a:hover {
       </div>
     </section>
 
-    <section id="philosophy">
-      <h2>アリーノの理念・特徴</h2>
+  
+
+
+<section id="philosophy" class="content-section">      <h2>アリーノの理念・特徴</h2>
       <div class="info-box">
         <p>就労継続支援B型事業所 アリーノは、奈良市にある障がいのある方の就労を支援する事業所です。</p>
         <p><strong>「蟻の思いは天まで届く」</strong>と言うように</p>
@@ -293,8 +304,7 @@ footer a:hover {
       </div>
     </section>
 
-    <section id="event-section">
-      <h2>イベント紹介</h2>
+<section id="event-section" class="content-section">      <h2>イベント紹介</h2>
       <p>定期的にお菓子パーティやビンゴ大会、たこ焼きパーティなどを開催。</p>
       <p>幅広い年代の方が楽しく交流しています。</p>
 
@@ -309,13 +319,13 @@ footer a:hover {
       </div>
     </section>
 
-<section style="text-align: center; padding: 3rem 1rem; border-radius: 8px; margin-top: 2rem; background-color: #f8fbff;">
-      <h2>お問い合わせ</h2>
-      <p><strong>電話番号：</strong><a href="tel:0742778194">0742778194</a></p>
-      <p>営業時間：9時〜18時</p>
-      <p>ご利用や見学に関するご質問・ご相談など、お気軽にお問い合わせください。</p>
-      <a class="contact-button" href="contact.html">📩 お問い合わせフォームへ</a>
-    </section>
+<section class="content-section contact-section">  <h2>お問い合わせ</h2>
+  <p><strong>電話番号：</strong><a href="tel:0742778194">0742778194</a></p>
+  <p>営業時間：9時〜18時</p>
+  <p>ご利用や見学に関するご質問・ご相談など、お気軽にお問い合わせください。</p>
+  <a class="contact-button" href="contact.html">📩 お問い合わせフォームへ</a>
+</section>
+
 
   </main>
 
