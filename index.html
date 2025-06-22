@@ -41,7 +41,7 @@ nav a:hover {
 }
 
 header {
-  padding: 0 32px;  
+  padding: 0 20px; /* container と同じに */
   max-width: 1200px;
  margin: 0 auto;
   display: flex;
@@ -57,20 +57,21 @@ header {
 
     
 
-    section {
-  padding: 80px 32px;
+  section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8fbff;
 }
+
 
 
 h2 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #1a73e8;
-  margin-bottom: 2rem;
-  line-height: 1.3;
-  padding-left: 32px;  /* ← 追加！ */
-  padding-right: 32px; /* ← 任意（デザインバランス的におすすめ） */
+  padding-left: 20px;
+  padding-right: 20px;
+  /* 他のスタイルはそのまま */
 }
+
 
 h3 {
   font-size: 1.4rem;
@@ -118,15 +119,9 @@ p {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 32px;
-}
+ padding: 0 20px; /* container と同じに */}
 
-section {
-  padding: 80px 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #f8fbff;
-}
+
 
 
 
@@ -252,8 +247,7 @@ footer a:hover {
   background-color: #005fa3;
 }
 .content-section {
-  padding: 80px 32px;
-  max-width: 1200px;
+padding: 80px 20px; /* container と同じに */  max-width: 1200px;
   margin: 0 auto;
   background-color: #f8fbff;
   text-align: center; /* ← 追加！ */
