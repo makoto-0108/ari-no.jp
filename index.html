@@ -47,14 +47,14 @@ nav a:hover {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px; /* 横余白はここだけ */
+  /* paddingは削除 or 移動 */
 }
+
 
 header,
 section,
 main {
   padding: 0; /* 余計なpaddingなし */
-  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -65,12 +65,6 @@ main {
 
     
 
-  section {
-
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #f8fbff;
-}
 
 
 
@@ -135,14 +129,17 @@ main {
 
 
 
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none; /* ← これを忘れずに！ */
+}
+
+
 
     .nav-links a {
       background-color: #3399ff;
@@ -207,8 +204,9 @@ footer a:hover {
   }
 }
 .navbar {
-  margin-left: 1rem;
+  margin-left: 0;
 }
+
 
 @media screen and (max-width: 768px) {
   .nav-links {
@@ -271,17 +269,18 @@ footer a:hover {
 <body>
   <div class="container">
     <header role="banner">
-      <h1 class="site-title"><span class="logo-text">就労継続支援B型</span> アリーノ</h1>
-      <nav class="navbar" aria-label="メインナビゲーション">
-        <ul class="nav-links">
-          <li><a href="index.html">ホーム</a></li>
-          <li><a href="about.html">事業所紹介</a></li>
-          <li><a href="supporters-voice.html">ご利用をご検討の方へ</a></li>
-          <li><a href="access.html">アクセス</a></li>
-          <li><a href="contact.html">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </header>
+  <h1 class="site-title"><span class="logo-text">就労継続支援B型</span> アリーノ</h1>
+  <nav class="navbar" aria-label="メインナビゲーション">
+    <ul class="nav-links">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="about.html">事業所紹介</a></li>
+      <li><a href="supporters-voice.html">ご利用をご検討の方へ</a></li>
+      <li><a href="access.html">アクセス</a></li>
+      <li><a href="contact.html">お問い合わせ</a></li>
+    </ul>
+  </nav>
+</header>
+
 
     <main>
       <section id="basic-info" class="content-section">
