@@ -209,38 +209,50 @@ footer a:hover {
   margin-left: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .site-title {
+    font-size: 1.4em; /* 少し小さめに */
+    text-align: center;
+    line-height: 1.2;
+  }
+  .site-title .logo-text {
+    display: block; /* ブロック化して改行 */
+    margin-bottom: 0.2em; /* 下に少し余白 */
+  }
+}
 
 @media screen and (max-width: 768px) {
   .nav-links {
-    width: 100%;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    align-items: center;
+    gap: 0; /* ボタン間の隙間はなくす */
+    overflow-x: visible; /* 横スクロール解除 */
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .nav-links a {
-    display: block;
-    width: 100%;
-    background-color: #cce4ff; /* ← 明るくて目立つ色に変更 */
-    color: #333;
-    padding: 12px 16px;
-    border-radius: 12px;
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-    transition: background-color 0.3s ease;
+    background-color: transparent !important; /* 背景なし */
+    border-radius: 0 !important;
+    padding: 8px 0 !important;
+    font-size: 1.1rem;
+    color: #0077cc;
+    border-bottom: 2px solid transparent;
+    width: auto;
+    min-width: auto;
+    max-width: none;
   }
 
-  .nav-links a:hover {
-    background-color: #99ccff; /* ← ホバー時に少し濃く */
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: transparent !important;
+    color: #005fa3;
+    border-bottom: 2px solid #0077cc;
   }
-}
-.nav-links li {
-  list-style: none;
-  margin-bottom: 8px; /* スマホでの余白を確保 */
+
+  .nav-links li {
+    margin: 0 0 8px 0;
+  }
 }
 
 .contact-button {
